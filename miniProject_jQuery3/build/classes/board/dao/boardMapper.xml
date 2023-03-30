@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="boardSQL">
+	<!-- 글쓰기 -->
+	<insert id="boardWrite" parameterType="java.util.Map">
+		insert into board(seq,id,name,email,subject,content,ref)
+		values(seq_board.nextval
+			 , #{id}
+			 , #{name}
+			 , #{email}
+			 , #{subject}
+			 , #{content}
+			 , seq_board.currval)
+	</insert>
+	
+	<!-- 목록 -->
+	<select id="boardList" parameterType="java.util.Map" resultType="board">
+		<!-- SELECT * FROM 
+		(SELECT ROWNUM RN, TT.* FROM
+		(SELECT * FROM BOARD ORDER BY REF DESC, STEP ASC) TT 
+		)WHERE RN BETWEEN #{startNum} AND #{endNum} -->
+		
+		<![CDATA[
+		SELECT * FROM 
+		(SELECT ROWNUM RN, TT.* FROM
+		(SELECT * FROM BOARD ORDER BY REF DESC, STEP ASC) TT 
+		)WHERE RN >= #{startNum} AND RN <= #{endNum}
+		]]>
+	</select>
+	
+	<select id="getTotalA" resultType="int">
+		select count(*) from board
+	</select>
+	
+	<select id="getBoard" parameterType="int" resultType="board">
+		SELECT * FROM BOARD WHERE SEQ = #{seq}
+	</select>
+</mapper>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
