@@ -1,0 +1,8 @@
+package com.hrhz.web.controller;
+
+//front controller
+public class IndexController {
+	
+	
+	
+}

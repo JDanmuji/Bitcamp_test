@@ -1,0 +1,10 @@
+package com.hrhz.web.controller;
+
+import javax.servlet.annotation.WebServlet;
+
+//front controller
+public class IndexController {
+	
+	
+	
+}
