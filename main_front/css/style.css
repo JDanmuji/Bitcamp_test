@@ -391,3 +391,12 @@ footer {
     gap: 100px;
     min-width: 500px;
 }
+.footerChannels {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.footerChannels > div {
+    display: flex;
+    justify-content: space-between;
+}
