@@ -1,0 +1,209 @@
+* {
+    font-family: "Noto Sans KR", sans-serif;
+}
+body {
+    margin: 0 auto;
+    line-height: 1.15;
+}
+
+/* header */
+header {
+    position: sticky;
+    top: 0px;
+    left: 0px;
+    z-index: 90;
+    width: 100%;
+    min-width: 1024px;
+    box-shadow: rgb(237, 237, 237) 0px 1px 0px 0px;
+    background-color: rgb(255, 255, 255);
+    margin-bottom: 30px;
+}
+.headerWrap {
+    display: flex;
+    position: relative;
+    align-items: center;
+    padding: 20px 70px;
+}
+.amondzLogo {
+    width: 134px;
+    margin-right: 80px;
+}
+.mainMenu {
+    display: flex;
+    gap: 40px;
+
+    font-size: 15px;
+    font-weight: bold;
+    color: rgb(155, 155, 155);
+    line-height: 22px;
+    letter-spacing: -0.5px;
+}
+.mainMenu a:link,
+.mainMenu a:visited {
+    color: inherit;
+}
+.mainMenu a:hover,
+.mainMenu a:active {
+    color: #000;
+}
+.search {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 345px;
+    padding: 8px 0px;
+    margin: 0 auto;
+    border-bottom: 1px solid rgb(237, 237, 237);
+    color: rgb(155, 155, 155);
+    cursor: pointer;
+}
+.search img {
+    width: 20px;
+    height: 20px;
+}
+.authMenu {
+    display: flex;
+    gap: 30px;
+
+    font-family: Barlow;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 22px;
+    letter-spacing: -0.3px;
+    color: rgb(155, 155, 155);
+}
+
+/* search modal */
+.searchModal {
+    display: none;
+    position: absolute;
+    margin: 0 auto;
+    top: 0;
+    right: 0;
+    left: 0;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: rgba(197, 197, 197, 0.5) 0px 2px 11px 0px;
+    min-width: 600px;
+    max-width: 650px;
+    height: auto;
+    padding: 20px 16px 40px;
+}
+.searchForm {
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 8px 0px;
+    margin: 0 auto;
+    padding-bottom: 20px;
+    color: rgb(155, 155, 155);
+    cursor: pointer;
+    border: none;
+}
+.searchForm form {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    width: 100%;
+    border-bottom: 1px solid rgb(237, 237, 237);
+}
+.searchForm input {
+    width: 100%;
+    color: #ccc;
+    font-size: 16px;
+    padding-top: 8px;
+    padding-bottom: 4px;
+}
+.searchForm img {
+    width: 20px;
+    height: 20px;
+}
+.closeBtn {
+    width: 50px;
+    font-weight: normal;
+    line-height: 1.5;
+    letter-spacing: -0.5px;
+    color: rgb(155, 155, 155);
+    font-size: 16px;
+}
+.searchModal p {
+    font-size: 18px;
+    margin-bottom: 16px;
+}
+.searchRecommend {
+    display: flex;
+    gap: 10px;
+}
+.searchRecommend > div {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+}
+.searchRecommend img {
+    width: 115px;
+    height: 115px;
+    margin-bottom: 10px;
+}
+.searchRecommend span {
+    font-size: 13px;
+    line-height: 19px;
+    letter-spacing: -0.5px;
+}
+
+/* main - swiper slide */
+main {
+    max-width: 1024px;
+    min-width: 1024px;
+    padding: 0px 30px;
+    margin: 0 auto;
+
+    display: flex;
+}
+.leftSection {
+    width: 20%;
+
+    background-color: aquamarine;
+}
+.rightSection {
+    width: 80%;
+
+    background-color: pink;
+}
+
+/* footer */
+footer {
+    line-height: 18px;
+    font-size: 12px;
+    font-weight: 500;
+    min-width: 1024px;
+}
+.footer1 {
+    display: flex;
+    padding: 40px;
+    gap: 100px;
+    justify-content: space-between;
+    border-top: 1px solid rgb(237, 237, 237);
+    border-bottom: 1px solid rgb(237, 237, 237);
+}
+.footer1Left {
+    display: flex;
+    gap: 100px;
+}
+.footer1Left a {
+    min-width: 50px;
+}
+.footer1Left div {
+    min-width: 500px;
+}
+.footer1Left div ul {
+    font-weight: 400;
+    font-size: 11px;
+    color: #777;
+}
+.footer1Right {
+    display: flex;
+    gap: 100px;
+    min-width: 500px;
+}
