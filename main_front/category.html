@@ -1,110 +1,515 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8" />
-        <title>HRHZ</title>
-        <link rel="stylesheet" href="css/reset.css" />
-        <link rel="stylesheet" href="css/category_style.css" />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap"
-            rel="stylesheet"
+  <head>
+    <meta charset="UTF-8" />
+    <title>HRHZ</title>
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/category_style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow:wght@500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="headerWrap">
+        <img
+          class="amondzLogo"
+          src="images/amonds_logo.jpg"
+          alt="amondz logo"
         />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Barlow:wght@500&display=swap"
-            rel="stylesheet"
-        />
-    </head>
-    <body>
-        <header>
-            <div class="headerWrap">
-                <img
-                    class="amondzLogo"
-                    src="images/amonds_logo.jpg"
-                    alt="amondz logo"
-                />
-                <div class="mainMenu">
-                    <a href="category.html">카테고리</a>
-                    <a href="">브랜드</a>
-                </div>
-                <div class="search">
-                    <div>궁금한 주얼리를 검색해보세요!</div>
-                    <img src="images/search_btn.png" alt="search icon" />
-                </div>
-                <div class="authMenu">
-                    <a class="loginBtn">로그인</a>
-                    <a class="myBtn">마이</a>
-                    <a class="cartBtn">
-                        <img src="images/header_cart_btn.svg" alt="cart icon" />
-                    </a>
-                </div>
+        <div class="mainMenu">
+          <a href="category.html">카테고리</a>
+          <a href="">브랜드</a>
+        </div>
+        <div class="search">
+          <div>궁금한 주얼리를 검색해보세요!</div>
+          <img src="images/search_btn.png" alt="search icon" />
+        </div>
+        <div class="authMenu">
+          <a class="loginBtn">로그인</a>
+          <a class="myBtn">마이</a>
+          <a class="cartBtn">
+            <img src="images/header_cart_btn.svg" alt="cart icon" />
+          </a>
+        </div>
 
-                <div class="searchModal">
-                    <div class="searchForm">
-                        <form>
-                            <input
-                                type="text"
-                                value="궁금한 주얼리를 검색해보세요!"
-                            />
-                            <button>
-                                <img
-                                    src="images/search_btn.png"
-                                    alt="search icon"
-                                />
-                            </button>
-                        </form>
-                        <button class="closeBtn">닫기</button>
-                    </div>
-                    <p><strong>추천 상품</strong></p>
-                    <div class="searchRecommend">
-                        <div>
-                            <img src="images/test.jpg" alt="" />
-                            <span><strong>추천브랜드</strong></span>
-                            <span>추천상품명</span>
-                        </div>
-                        <div>
-                            <img src="images/test.jpg" alt="" />
-                            <span><strong>추천브랜드</strong></span>
-                            <span>추천상품명</span>
-                        </div>
-                        <div>
-                            <img src="images/test.jpg" alt="" />
-                            <span><strong>추천브랜드</strong></span>
-                            <span>추천상품명</span>
-                        </div>
-                        <div>
-                            <img src="images/test.jpg" alt="" />
-                            <span><strong>추천브랜드</strong></span>
-                            <span>추천상품명</span>
-                        </div>
-                        <div>
-                            <img src="images/test.jpg" alt="" />
-                            <span><strong>추천브랜드</strong></span>
-                            <span>추천상품명</span>
-                        </div>
-                    </div>
-                </div>
+        <div class="searchModal">
+          <div class="searchForm">
+            <form>
+              <input type="text" value="궁금한 주얼리를 검색해보세요!" />
+              <button>
+                <img src="images/search_btn.png" alt="search icon" />
+              </button>
+            </form>
+            <button class="closeBtn">닫기</button>
+          </div>
+          <p><strong>추천 상품</strong></p>
+          <div class="searchRecommend">
+            <div>
+              <img src="images/test.jpg" alt="" />
+              <span><strong>추천브랜드</strong></span>
+              <span>추천상품명</span>
             </div>
-        </header>
+            <div>
+              <img src="images/test.jpg" alt="" />
+              <span><strong>추천브랜드</strong></span>
+              <span>추천상품명</span>
+            </div>
+            <div>
+              <img src="images/test.jpg" alt="" />
+              <span><strong>추천브랜드</strong></span>
+              <span>추천상품명</span>
+            </div>
+            <div>
+              <img src="images/test.jpg" alt="" />
+              <span><strong>추천브랜드</strong></span>
+              <span>추천상품명</span>
+            </div>
+            <div>
+              <img src="images/test.jpg" alt="" />
+              <span><strong>추천브랜드</strong></span>
+              <span>추천상품명</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
 
-        <main>
-            <section class="leftSection">
-                <h2>카테고리</h2>
+    <main>
+      <section class="leftSection">
+        <h2>카테고리</h2>
+        <div class="categoryWrap">
+          <p class="categoryTitle">
+            <span>BEST</span
+            ><img
+              class="expandBtn"
+              src="images/expand_black_btn.png"
+              alt="plus button icon"
+            />
+          </p>
+          <div class="categoryToggle">
+            <p>반지</p>
+            <p>귀걸이</p>
+            <p>팔찌</p>
+            <p>헤어</p>
+            <p>목걸이</p>
+          </div>
+        </div>
+        <div class="categoryWrap">
+          <p class="categoryTitle">
+            <span>반지</span
+            ><img
+              class="expandBtn"
+              src="images/expand_black_btn.png"
+              alt="plus button icon"
+            />
+          </p>
+          <div class="categoryToggle">
+            <p>커플링</p>
+            <p>원석</p>
+            <p>각인</p>
+            <p>실반지</p>
+            <p>비즈반지</p>
+          </div>
+        </div>
+        <div class="categoryWrap">
+          <p class="categoryTitle">
+            <span>귀걸이</span
+            ><img
+              class="expandBtn"
+              src="images/expand_black_btn.png"
+              alt="plus button icon"
+            />
+          </p>
+          <div class="categoryToggle">
+            <p>피어싱</p>
+            <p>링</p>
+            <p>원석</p>
+            <p>진주</p>
+            <p>드롭</p>
+          </div>
+        </div>
+        <div class="categoryWrap">
+          <p class="categoryTitle">
+            <span>팔찌</span
+            ><img
+              class="expandBtn"
+              src="images/expand_black_btn.png"
+              alt="plus button icon"
+            />
+          </p>
+          <div class="categoryToggle">
+            <p>원석</p>
+            <p>비즈</p>
+            <p>커플</p>
+            <p>팬던트</p>
+            <p>진주</p>
+          </div>
+        </div>
+        <div class="categoryWrap">
+          <p class="categoryTitle">
+            <span>목걸이</span
+            ><img
+              class="expandBtn"
+              src="images/expand_black_btn.png"
+              alt="plus button icon"
+            />
+          </p>
+          <div class="categoryToggle">
+            <p>진주</p>
+            <p>원석</p>
+            <p>초커</p>
+            <p>비즈</p>
+            <p>팬던트</p>
+          </div>
+        </div>
+        <div class="categoryWrap">
+          <p class="categoryTitle">
+            <span>헤어</span
+            ><img
+              class="expandBtn"
+              src="images/expand_black_btn.png"
+              alt="plus button icon"
+            />
+          </p>
+          <div class="categoryToggle openToggle">
+            <p>헤어밴드</p>
+            <p>스크런치</p>
+            <p>헤어핀</p>
+            <p>집게핀</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="rightSection">
+        <div class="stickyMenu">
+          <div class="selectedCategory">
+            <img src="images/category_arrow.png" alt="arrow icon" />
+            <span>BEST</span>
+          </div>
+          <div class="filterBox">
+            <span>인기순</span>
+            <div class="sortToggle">
+              <div><a href="">인기순</a></div>
+              <div><a href="">신상품순</a></div>
+              <div><a href="">낮은가격순</a></div>
+              <div><a href="">높은가격순</a></div>
+            </div>
+            <span>필터</span>
+            <div class="filterToggle">
+              <div>
+                <a>브랜드</a>
+                <a>컬러</a>
+                <a>할인율</a>
+                <a>닫기</a>
+              </div>
+
+              <div>
+                <img
+                  class="searchIcon"
+                  src="images/search_btn.png"
+                  alt="search icon"
+                />
+                <input value="브랜드명을 입력해 주세요" />
+              </div>
+
+              <div class="recommendBrand">
+                <h3>추천 브랜드</h3>
                 <div>
-                    <span>BEST</span>
+                  <img
+                    class="brandImg"
+                    src="images/test.jpg"
+                    alt="brand image"
+                  />
+                  <p>브랜드명</p>
                 </div>
-            </section>
-            <section class="rightSection">
-                <h2>카테고리</h2>
-            </section>
-        </main>
+                <div>
+                  <img
+                    class="brandImg"
+                    src="images/test.jpg"
+                    alt="brand image"
+                  />
+                  <p>브랜드명</p>
+                </div>
+                <div>
+                  <img
+                    class="brandImg"
+                    src="images/test.jpg"
+                    alt="brand image"
+                  />
+                  <p>브랜드명</p>
+                </div>
+                <button>검색결과 보기</button>
+              </div>
+            </div>
+          </div>
+        </div>
 
-        <footer>
-            <div class="footer1">
-                <div class="footer1Left">
-                    <a>회사소개</a>
-                    <a>입점신청</a>
+        <div class="articleContents">
+          <a href="">
+            <div class="articleImg">
+              <img src="images/test.jpg" />
+            </div>
+            <div class="articleDesc">
+              <span><strong>브랜드명</strong></span>
+              <span>상품명</span>
 
-                    <!--
+              <div class="articlePrice">
+                <span class="percentage"
+                  ><span><strong>13</strong></span
+                  >%</span
+                >
+                <span class="price"
+                  ><span><strong>164,330</strong></span
+                  >원</span
+                >
+                <img
+                  class="deliveryIcon"
+                  src="images/delivery_today.jpg"
+                  alt="delivery today icon"
+                />
+              </div>
+              <svg
+                class="heartIcon"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="w-6 h-6"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"
+                />
+              </svg>
+            </div>
+            <div class="likeNumber">좋아요<span>4,400</span></div>
+          </a>
+          <a href="">
+            <div class="articleImg">
+              <img src="images/test.jpg" />
+            </div>
+            <div class="articleDesc">
+              <span><strong>브랜드명</strong></span>
+              <span>상품명</span>
+
+              <div class="articlePrice">
+                <span class="percentage"
+                  ><span><strong>13</strong></span
+                  >%</span
+                >
+                <span class="price"
+                  ><span><strong>164,330</strong></span
+                  >원</span
+                >
+                <img
+                  class="deliveryIcon"
+                  src="images/delivery_today.jpg"
+                  alt="delivery today icon"
+                />
+              </div>
+              <svg
+                class="heartIcon"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="w-6 h-6"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"
+                />
+              </svg>
+            </div>
+            <div class="likeNumber">좋아요<span>4,400</span></div>
+          </a>
+          <a href="">
+            <div class="articleImg">
+              <img src="images/test.jpg" />
+            </div>
+            <div class="articleDesc">
+              <span><strong>브랜드명</strong></span>
+              <span>상품명</span>
+
+              <div class="articlePrice">
+                <span class="percentage"
+                  ><span><strong>13</strong></span
+                  >%</span
+                >
+                <span class="price"
+                  ><span><strong>164,330</strong></span
+                  >원</span
+                >
+                <img
+                  class="deliveryIcon"
+                  src="images/delivery_today.jpg"
+                  alt="delivery today icon"
+                />
+              </div>
+              <svg
+                class="heartIcon"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="w-6 h-6"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"
+                />
+              </svg>
+            </div>
+            <div class="likeNumber">좋아요<span>4,400</span></div>
+          </a>
+        </div>
+        <div class="articleContents">
+          <a href="">
+            <div class="articleImg">
+              <img src="images/test.jpg" />
+            </div>
+            <div class="articleDesc">
+              <span><strong>브랜드명</strong></span>
+              <span>상품명</span>
+
+              <div class="articlePrice">
+                <span class="percentage"
+                  ><span><strong>13</strong></span
+                  >%</span
+                >
+                <span class="price"
+                  ><span><strong>164,330</strong></span
+                  >원</span
+                >
+                <img
+                  class="deliveryIcon"
+                  src="images/delivery_today.jpg"
+                  alt="delivery today icon"
+                />
+              </div>
+              <svg
+                class="heartIcon"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="w-6 h-6"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"
+                />
+              </svg>
+            </div>
+            <div class="likeNumber">좋아요<span>4,400</span></div>
+          </a>
+          <a href="">
+            <div class="articleImg">
+              <img src="images/test.jpg" />
+            </div>
+            <div class="articleDesc">
+              <span><strong>브랜드명</strong></span>
+              <span>상품명</span>
+
+              <div class="articlePrice">
+                <span class="percentage"
+                  ><span><strong>13</strong></span
+                  >%</span
+                >
+                <span class="price"
+                  ><span><strong>164,330</strong></span
+                  >원</span
+                >
+                <img
+                  class="deliveryIcon"
+                  src="images/delivery_today.jpg"
+                  alt="delivery today icon"
+                />
+              </div>
+              <svg
+                class="heartIcon"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="w-6 h-6"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"
+                />
+              </svg>
+            </div>
+            <div class="likeNumber">좋아요<span>4,400</span></div>
+          </a>
+          <a href="">
+            <div class="articleImg">
+              <img src="images/test.jpg" />
+            </div>
+            <div class="articleDesc">
+              <span><strong>브랜드명</strong></span>
+              <span>상품명</span>
+
+              <div class="articlePrice">
+                <span class="percentage"
+                  ><span><strong>13</strong></span
+                  >%</span
+                >
+                <span class="price"
+                  ><span><strong>164,330</strong></span
+                  >원</span
+                >
+                <img
+                  class="deliveryIcon"
+                  src="images/delivery_today.jpg"
+                  alt="delivery today icon"
+                />
+              </div>
+              <svg
+                class="heartIcon"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="w-6 h-6"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"
+                />
+              </svg>
+            </div>
+            <div class="likeNumber">좋아요<span>4,400</span></div>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer1">
+        <div class="footer1Left">
+          <a>회사소개</a>
+          <a>입점신청</a>
+
+          <!--
                     <div>
                         <span>법적 고지</span>
                         <ul>
@@ -124,63 +529,93 @@
                         </ul>
                     </div>
                     -->
-                </div>
-                <div class="footer1Right">
-                    <div class="footerGlobal">
-                        <span>글로벌</span>
-                        <div>
-                            <img src="" alt="amondz Japan logo" />
-                            <img src="" alt="amondz US logo" />
-                        </div>
-                    </div>
-
-                    <div class="footerChannels">
-                        <span>아몬즈를 다양한 채널에서 만나보세요.</span>
-                        <div>
-                            <a href=""
-                                ><img
-                                    src="images/footer_social_naver_post_btn.svg"
-                                    alt="naver post logo"
-                            /></a>
-                            <a href=""
-                                ><img
-                                    src="images/footer_social_insta_btn.svg"
-                                    alt="insta logo"
-                            /></a>
-                            <a href=""
-                                ><img
-                                    src="images/footer_social_youtube_btn.svg"
-                                    alt="youtube logo"
-                            /></a>
-                            <a href=""
-                                ><img
-                                    src="images/footer_social_facebook_btn.svg"
-                                    alt="facebook logo"
-                            /></a>
-                            <a href=""
-                                ><img
-                                    src="images/footer_social_kakao_btn.svg"
-                                    alt="kakao logo"
-                            /></a>
-                        </div>
-                    </div>
-                </div>
+        </div>
+        <div class="footer1Right">
+          <div class="footerGlobal">
+            <span>글로벌</span>
+            <div>
+              <img src="" alt="amondz Japan logo" />
+              <img src="" alt="amondz US logo" />
             </div>
-        </footer>
+          </div>
 
-        <script
-            type="text/javascript"
-            src="http://code.jquery.com/jquery-3.6.4.min.js"
-        ></script>
-        <script type="text/javascript">
-            $(function () {
-                $(".search").on("click", function (event) {
-                    $(".searchModal").css("display", "block");
-                });
-                $(".closeBtn").on("click", function (event) {
-                    $(".searchModal").css("display", "none");
-                });
-            });
-        </script>
-    </body>
+          <div class="footerChannels">
+            <span>아몬즈를 다양한 채널에서 만나보세요.</span>
+            <div>
+              <a href=""
+                ><img
+                  src="images/footer_social_naver_post_btn.svg"
+                  alt="naver post logo"
+              /></a>
+              <a href=""
+                ><img src="images/footer_social_insta_btn.svg" alt="insta logo"
+              /></a>
+              <a href=""
+                ><img
+                  src="images/footer_social_youtube_btn.svg"
+                  alt="youtube logo"
+              /></a>
+              <a href=""
+                ><img
+                  src="images/footer_social_facebook_btn.svg"
+                  alt="facebook logo"
+              /></a>
+              <a href=""
+                ><img src="images/footer_social_kakao_btn.svg" alt="kakao logo"
+              /></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script
+      type="text/javascript"
+      src="http://code.jquery.com/jquery-3.6.4.min.js"
+    ></script>
+    <script type="text/javascript">
+      $(function () {
+        $(".search").on("click", function (event) {
+          $(".searchModal").css("display", "block");
+        });
+        $(".closeBtn").on("click", function (event) {
+          $(".searchModal").css("display", "none");
+        });
+      });
+
+      // Show the first toggle when the page loads
+      $(".categoryWrap:not(:first)")
+        .find(".categoryToggle")
+        .toggle(".categoryToggle");
+
+      $(function () {
+        $(".categoryTitle img").on("click", function (event) {
+          $(this)
+            .parents(".categoryWrap")
+            .find(".categoryToggle")
+            .toggle(".categoryToggle");
+        });
+      });
+
+      $(".sortToggle").toggle(0);
+      $(function () {
+        $(".filterBox > span:first-child").on("click", function (event) {
+          $(this)
+            .parents(".filterBox")
+            .find(".sortToggle")
+            .toggle(0, ".sortToggle");
+        });
+      });
+
+      $(".filterToggle").toggle(0);
+      $(function () {
+        $(".filterBox > span:nth-child(3)").on("click", function (event) {
+          $(this)
+            .parents(".filterBox")
+            .find(".filterToggle")
+            .toggle(0, ".filterToggle");
+        });
+      });
+    </script>
+  </body>
 </html>
