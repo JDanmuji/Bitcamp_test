@@ -1,7 +1,6 @@
 /* header */
 * {
-    margin : 0 auto;
-    padding : 0;
+    padding: 0;
     font-family: "Noto Sans KR", sans-serif;
 }
 body {
@@ -155,62 +154,63 @@ header {
 /*brand main*/
 .main {
     width: 1024px;
-    margin:auto;
-    
+    margin: auto;
 }
 /*brand top*/
 .adHeader {
-    margin: 0 0 24px;    
+    margin: 0 0 24px;
 }
-.topSection{
-    display:flex;
-    padding:0px;
-    margin:0px;
+.topSection {
+    display: flex;
+    padding: 0px;
+    margin: 0px;
     width: 240px;
 }
-.adBrandTextOnImg{
-    position:relative;
+.adBrandTextOnImg {
+    position: relative;
     bottom: 30px;
     left: 65px;
     font-family: "Barlow";
     color: #fff;
     margin-left: 10px;
 }
-.earthImg{
+.earthImg {
     width: 15px;
     height: 15px;
-    margin-right:5px;
+    margin-right: 5px;
 }
-.brandHoverContent{
-    position:relative;
-    bottom: 160px;    
+.brandHoverContent {
+    position: relative;
+    display: none;
+    padding-left: 65px;
+    bottom: 145px;
     font-family: "Barlow";
     color: #fff;
-    }
-.arrowImgSection{
-    visibility: hidden;
-    width:110px;
+}
+
+.arrowImgSection {
+    width: 110px;
     height: 45px;
 }
-.arrowImgSection:hover {
-    visibility: visible;
-    background-color: #a3a3a3;
-}
-.arrowImg{
-    width:15px;
+
+.arrowImg {
+    width: 15px;
     height: 15px;
     margin-left: 50px;
 }
 .adTitleImg01 {
     display: flex;
-    list-style: none;    
+    list-style: none;
     margin-block-start: 1em;
     margin-block-end: 1em;
     margin-inline-start: 0px;
     margin-inline-end: 0px;
     height: 250px;
 }
-.topImg{
+.adTitleImg01:hover {
+    opacity: 0.5;
+}
+.topImg {
     width: 240px;
     height: 240px;
 }
@@ -218,37 +218,35 @@ header {
 .scTitleText {
     font-size: 20px;
     font-family: "Noto Sans KR", sans-serif;
-   }
+}
 
-
-.scBrand{
-    display: flex;    
-    align-items: center;  
-    margin: 0; 
-    
+.scBrand {
+    display: flex;
+    align-items: center;
+    margin: 0;
 }
 .scMenuArea {
     display: flex;
-    margin-top: 20px;    
+    margin-top: 20px;
     list-style: none;
 }
-.middle{
-    width:50px;
+.middle {
+    width: 50px;
     height: 100px;
     margin: 0;
 }
+.brandLink {
+    display: flex;
+    width: 450px;
+}
 .brandInfoSection {
     display: flex;
-    width:450px;    
-    align-items: center;          
+    width: 450px;
+    align-items: center;
 }
-.brandInfoContent {
-    display: flex;
-    padding: 24px 24px 24px 29px;   
-}
-.numberSection{
-    margin-left: 0;
-    margin-right: 20px;
+.numberSection {
+    margin-right: 25px;
+    margin-top: 37px;
 }
 .scBrandLogoImage {
     width: 100px;
@@ -258,42 +256,40 @@ header {
     margin-left: 0;
     margin-right: 0;
 }
-.scBrandTitleSection{
-    margin-left:10px;
+.scBrandTitleSection {
+    margin-left: 25px;
+    margin-top: 30px;
     text-align: left;
 }
-.scBrandTitle{
-    position: inherit;
+.scBrandTitle {
     font-weight: bold;
     color: #0c0c0c;
     font-size: 14px;
 }
-.scBrandTagListBox{
-    margin-top:5px;
+.scBrandTagListBox {
+    margin-top: 5px;
 }
-.scBrandTagList{
+.scBrandTagList {
     color: #a3a3a3;
     font-size: 13px;
 }
-.brandLikeBtn{
-    margin-right: 0;
+
+.heartImg {
+    width: 25px;
+    height: 20px;
 }
-.heartImg{
-    width:25px;
-    height:20px;
-}
-.lineTotal{
+.lineTotal {
     display: flex;
     margin: 0;
 }
-.line1{
-    margin:0;
+.line1 {
+    margin: 0;
 }
-.line2{
-    margin:0 50px;
+.line2 {
+    margin: 0 50px;
 }
 
-.lineImg{
+.lineImg {
     width: 450px;
 }
 .brandRankinImage {
@@ -346,6 +342,3 @@ footer {
     display: flex;
     justify-content: space-between;
 }
-
-
-
