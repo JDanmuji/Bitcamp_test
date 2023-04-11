@@ -238,7 +238,7 @@ main {
 }
 .filterBox {
     margin: 0px auto;
-    width: 100%;
+    width: calc(100%-2px);
     font-size: 14px;
     letter-spacing: -0.5px;
     border: 1px solid rgb(237, 237, 237);
@@ -409,6 +409,10 @@ main {
     flex-direction: column;
     gap: 6px;
     font-size: 14px;
+}
+.articleDesc span:first-child,
+.articleDesc span:nth-child(2) {
+    font-size: 13px;
 }
 .articlePrice {
     display: flex;

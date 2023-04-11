@@ -596,14 +596,14 @@
             // Show the first toggle when the page loads
             $(".categoryWrap:not(:first)")
                 .find(".categoryToggle")
-                .toggle(".categoryToggle");
+                .slideToggle(".categoryToggle");
 
             $(function () {
                 $(".categoryTitle img").on("click", function (event) {
                     $(this)
                         .parents(".categoryWrap")
                         .find(".categoryToggle")
-                        .toggle(".categoryToggle");
+                        .slideToggle(".categoryToggle");
                 });
             });
 
