@@ -1,0 +1,820 @@
+.mypageSection h3 {
+  margin: 0px 0px 24px;
+  font-size: 26px;
+  font-weight: bold;
+  line-height: 38px;
+  letter-spacing: -0.6px;
+}
+/* reviewForm */
+/* topNav */
+.reviewTopList {
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+}
+.reviewTopListTitle0 {
+  display: flex;
+  width: 100%;
+  height: 44px;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  align-items: center;
+  border-bottom: 1px solid rgb(0, 0, 0);
+}
+
+.reviewTopListTitle1 {
+  display: flex;
+  width: 100%;
+  height: 44px;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  align-items: center;
+  border-bottom: 1px solid rgb(237, 237, 237);
+}
+.reviewBtn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: inherit;
+  text-decoration: inherit;
+  color: inherit;
+  outline: none;
+  box-shadow: none;
+}
+.reviewTopListTitle0 button {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: -0.5px;
+  color: rgb(0, 0, 0);
+}
+.reviewTopListTitle1 button {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: -0.5px;
+  color: rgb(155, 155, 155);
+}
+/* content */
+.reviewContentWrap {
+  padding-top: 24px;
+}
+.reviewContentNotice strong {
+  font-size: 15px;
+  font-weight: bold;
+  line-height: 22px;
+  letter-spacing: -0.5px;
+}
+.reviewContentNotice p {
+  max-width: 380px;
+  margin-top: 2px;
+  font-size: 13px;
+  letter-spacing: -0.5px;
+  line-height: 22px;
+  color: rgb(155, 155, 155);
+}
+.reviewContenInstruction dl {
+  margin: 24px 0px 0px;
+}
+.reviewContenInstruction dl button {
+  font-family: NotoSansCJKkr;
+  font-size: 12px;
+  line-height: 18px;
+  letter-spacing: -0.3px;
+}
+.reviewContenInstruction dl dt {
+  display: flex;
+  margin: 0 0 16px;
+  -webkit-box-align: center;
+  align-items: center;
+  cursor: pointer;
+}
+.reviewContenInstruction dl dt::before {
+  content: "";
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin-right: 4px;
+  background-image: url(reviewImg/noti_info.png);
+  background-size: contain;
+}
+.reviewContenInstruction dl dt::after {
+  content: "";
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin-left: 4px;
+  background-image: url(reviewImg/arrow_bottom_outline_black_btn.png);
+  background-size: contain;
+  transform: rotate(180deg);
+}
+.reviewContenInstruction dl dd {
+  display: block;
+  margin: 0;
+  padding: 16px;
+  background-color: rgb(247, 247, 247);
+}
+.reviewContenInstruction ul li {
+  display: flex;
+  font-size: 12px;
+  letter-spacing: -0.3px;
+  line-height: 20px;
+  color: rgb(155, 155, 155);
+}
+.reviewContenInstruction ul li:not(:last-child) {
+  margin-bottom: 4px;
+}
+.reviewContenInstruction ul li::before {
+  content: "";
+  flex-shrink: 0;
+  display: inline-block;
+  width: 3px;
+  height: 3px;
+  margin-top: 6.5px;
+  margin-right: 4px;
+  border-radius: 50%;
+  background-color: rgb(155, 155, 155);
+  vertical-align: middle;
+}
+.productReview {
+  margin: 100px auto 0px;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: -0.5px;
+  color: rgb(155, 155, 155);
+  text-align: center;
+}
+
+/* couponForm */
+/* couponAdd */
+.mypageSection .couponSection {
+  margin-bottom: 40px;
+}
+.couponAddForm > label {
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: -0.5px;
+  pointer-events: none;
+}
+.couponAddForm > div {
+  position: relative;
+  width: 390px;
+  height: 48px;
+}
+
+.couponAddForm > div input {
+  width: 100%;
+  padding: 16px 72px 8px 0px;
+  font-family: NotoSansCJKkr;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 24px;
+  letter-spacing: -0.3px;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-image: initial;
+  border-bottom: 1px solid rgb(217, 217, 217);
+  outline: none;
+  background: transparent;
+  color: rgb(0, 0, 0);
+}
+.couponAddForm > div input::placeholder {
+  color: rgb(221, 221, 221);
+}
+.couponAddForm > div .addOn {
+  position: absolute;
+  top: auto;
+  bottom: 8px;
+  right: 0px;
+  z-index: 10;
+}
+.couponAddForm > div .addOn .submitBtn {
+  width: 56px;
+  height: 25px;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: -0.3px;
+}
+.couponBtn:disabled {
+  background-color: rgb(221, 221, 221);
+}
+.couponBtn {
+  border-radius: 2px;
+  outline: none;
+  border: 1px solid transparent;
+  text-align: center;
+  cursor: pointer;
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+}
+/* couponTable */
+.couponTable caption {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: -0.5px;
+  text-align: left;
+  margin-bottom: 8px;
+}
+.couponTable .couponCount {
+  font-weight: bold;
+}
+.mypageTable thead {
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+}
+.mypageTable thead th {
+  padding: 12px 0px;
+  text-align: left;
+  font-size: 13px;
+  font-weight: normal;
+  line-height: 19px;
+  letter-spacing: -0.5px;
+}
+.couponTable tbody td {
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 22px;
+  letter-spacing: -0.5px;
+}
+.couponTable tbody td:nth-child(1) {
+  width: 110px;
+}
+.couponTable tbody td.empty {
+  font-weight: normal;
+}
+.couponContent {
+  padding-top: 80px;
+  text-align: center;
+}
+.couponContent .text {
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: -0.5px;
+  color: rgb(155, 155, 155);
+  margin-bottom: 16px;
+}
+
+/* 쇼핑하러가기 버튼 */
+.goShopBtn {
+  border-radius: 2px;
+  outline: none;
+  border: 1px solid transparent;
+  text-align: center;
+  cursor: pointer;
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: -0.3px;
+  height: 40px;
+  width: 181px;
+  line-height: 40px;
+}
+td.empty .goShopBtn {
+  width: 144px;
+  height: 40px;
+}
+
+/* Pint */
+.pointStatus {
+  margin-bottom: 56px;
+}
+.pointStatus h3 {
+  margin-bottom: 24px;
+}
+.statusBoard {
+  position: relative;
+  height: 116px;
+  background-color: rgb(247, 247, 247);
+}
+.statusBoard::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 32px;
+  left: 50%;
+  width: 1px;
+  height: 53px;
+  background-color: rgb(217, 217, 217);
+}
+.statusBoard .statusBoradItem {
+  display: inline-block;
+  width: 50%;
+  padding: 24px 0;
+  text-align: center;
+}
+.statusBoard .statusBoradItem:first-of-type {
+  float: left;
+}
+.statusBoard .statusBoradItem span {
+  display: inline-block;
+  font-family: Barlow;
+  font-size: 34px;
+  font-weight: 600;
+  line-height: 41px;
+  letter-spacing: -0.63px;
+  margin-bottom: 8px;
+}
+.statusBoard .statusBoradItem span.point {
+  color: #000;
+}
+.statusBoard .statusBoradItem span::after {
+  content: "P";
+  display: inline-block;
+}
+
+.statusBoard .statusBoradItem p {
+  font-size: 13px;
+  line-height: 19px;
+  letter-spacing: -0.5px;
+  color: #000;
+}
+.statusBoard .statusBoradItem:last-of-type {
+  float: right;
+}
+.statusBoard .statusBoradItem .usedPoint {
+  color: rgb(155, 155, 155);
+}
+.statusBoard .statusBoradItem span.usedPoint::before {
+  content: "-";
+  display: inline-block;
+}
+/* pointTable */
+.pointTable {
+  margin-bottom: 40px;
+}
+.pointTable h3.tableTitle {
+  margin-bottom: 8px;
+}
+.pointTable thead th {
+  font-weight: 500;
+}
+.pointTable tbody td {
+  font-family: NotoSansCJKkr;
+  line-height: 22px;
+  color: #000;
+}
+.pointTable tbody td:nth-child(1) {
+  width: 120px;
+}
+.pointTable tbody td.empty {
+  padding-top: 100px;
+  text-align: center;
+}
+.pointTable tbody td.empty .text {
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: -0.5px;
+  color: rgb(155, 155, 155);
+  margin-bottom: 16px;
+}
+
+/* orderListForm */
+.orderListSection .empty {
+  text-align: center;
+  padding-top: 100px;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: -0.5px;
+  color: rgb(155, 155, 155);
+}
+
+/* likeProductList */
+.likeProductList .productEmptyWrap {
+  margin-top: 100px;
+  text-align: center;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: -0.5px;
+}
+.likeProductList .productEmptyWrap .productEmptyHead {
+  font-weight: 500;
+}
+.likeProductList .productEmptyWrap .productEmptyContent {
+  margin-top: 5px;
+  color: rgb(155, 155, 155);
+}
+.likeProductList .productEmptyWrap .goShopBtn {
+  margin-top: 24px;
+  width: 144px;
+  height: 40px;
+}
+
+/* likeBrand */
+.likeBrandList .brandEmptyWrap {
+  margin-top: 100px;
+  text-align: center;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: -0.5px;
+}
+.likeBrandList .brandEmptyWrap .brandEmptyHead {
+  font-weight: 500;
+}
+.likeBrandList .brandEmptyWrap .brandEmptyContent {
+  margin-top: 5px;
+  color: rgb(155, 155, 155);
+}
+.likeBrandList .brandEmptyWrap .goShopBtn {
+  margin-top: 24px;
+  width: 144px;
+  height: 40px;
+}
+
+/* mypageManage */
+/* mypage0 */
+/* userCheck */
+h3.userCheckHead {
+  margin: 0;
+  font-size: 26px;
+  font-weight: bold;
+}
+.userCheckSection .userCheckInfo {
+  margin-top: 16px;
+}
+.userCheckSection .userCheckInfo p {
+  font-size: 15px;
+  letter-spacing: -0.5px;
+  margin-bottom: 2px;
+  line-height: 22px;
+}
+.userCheckSection .userCheckContent {
+  max-width: 554px;
+  margin-top: 64px;
+}
+.userCheckSection .userCheckContent .userEmail {
+  margin-bottom: 16px;
+}
+.userCheckSection .userCheckContent .userEmail label {
+  font-size: 12px;
+  line-height: 18px;
+  letter-spacing: -0.3px;
+  color: rgb(155, 155, 155);
+}
+.userCheckSection .userCheckContent .userEmail div {
+  height: 36px;
+  line-height: 36px;
+  font-family: Barlow;
+  font-size: 14px;
+  font-weight: 500;
+}
+.userPwdWrap {
+  position: relative;
+}
+.userPwdWrap input {
+  width: 100%;
+  padding: 9px 24px 10px 0px;
+  font-size: 14px;
+  border-bottom: 1px solid rgb(225, 225, 225);
+  outline: none;
+  background: transparent;
+  color: #000;
+  font-family: Barlow;
+}
+.userPwdWrap label {
+  position: absolute;
+  bottom: 8px;
+  left: 0px;
+  font-size: 13px;
+  letter-spacing: -0.5px;
+  color: rgb(155, 155, 155);
+  pointer-events: none;
+}
+.userCheckBtn:disabled {
+  background-color: rgb(221, 221, 221);
+}
+.userCheckContent .userCheckBtn {
+  width: 100%;
+  height: 40px;
+  margin-top: 40px;
+}
+/* mypage1 */
+/* LoginInfo */
+.mypageManage .userInfoFormArea {
+  width: 400px;
+  margin-top: 24px;
+}
+.mypageManage h4 {
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 24px;
+  letter-spacing: -0.3px;
+  padding: 12px 0px;
+  margin: 0px;
+  box-shadow: rgb(0, 0, 0) 0px 1px 0px 0px inset,
+    rgb(237, 237, 237) 0px -1px 0px 0px inset;
+}
+.userInfoFormArea::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.userInfoFormArea .formLeft {
+  float: left;
+  width: 84px;
+}
+.userInfoFormArea .formLeft label.formLabel {
+  display: inline-block;
+  height: 36px;
+  line-height: 36px;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: -0.5px;
+}
+.userInfoFormArea .formRight {
+  float: right;
+  width: 316px;
+}
+
+.userInfoFormArea .formRight .formInput,
+.userInfoFormArea .formRight .formText {
+  display: inline-block;
+  width: 316px;
+  height: 36px;
+  line-height: 36px;
+}
+
+.normalLogin .passwordForm {
+  width: 100%;
+  padding: 9px 0px 10px;
+  font-size: 14px;
+  border-bottom: 0.5px solid rgb(225, 225, 225);
+  outline: none;
+  background: transparent;
+  color: rgb(0, 0, 0);
+  font-family: Barlow;
+}
+
+.userInfoFormArea .formRight .btnWrap {
+  margin-top: 32px;
+}
+.whiteBtn {
+  border-radius: 2px;
+  outline: none;
+  text-align: center;
+  cursor: pointer;
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  border: 1px solid rgb(225, 225, 225);
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: -0.3px;
+  height: 40px;
+  width: 181px;
+  line-height: 40px;
+}
+.userInfoFormArea .modifyPwdBtn {
+  width: 100%;
+  margin-bottom: 48px;
+  border-color: #000;
+}
+.userInfoFormArea .formRight .btnWrap button {
+  height: 48px;
+}
+/* SNS Login */
+.mypageManage .snsLogin {
+  text-align: center;
+  padding: 64px 0px 120px;
+}
+
+.mypageManage .snsLogin .snsMainText {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: -0.44px;
+  margin-bottom: 8px;
+}
+.mypageManage .snsLogin .snsMainText .snsType {
+  color: rgb(98, 0, 240);
+}
+.mypageManage .snsLogin .snsMainText .snsType::before {
+  content: "*";
+  display: inline;
+}
+.mypageManage .snsLogin .snsSubText {
+  font-size: 13px;
+  line-height: 19px;
+  letter-spacing: -0.5px;
+  color: rgb(155, 155, 155);
+}
+
+/* UserInfo */
+
+.userInfoFormWrap .userInfoFormArea .formLeft label.formLabel.required::after {
+  display: inline-block;
+  content: "*";
+  color: rgb(98, 0, 240);
+}
+
+.inputPlaceholder {
+  position: relative;
+}
+
+.inputPlaceholder input {
+  width: 100%;
+  height: 36px;
+  padding: 9px 24px 10px 0px;
+  font-size: 14px;
+  border-image: initial;
+  border-bottom: 1px solid rgb(225, 225, 225);
+  outline: none;
+  background: transparent;
+  color: #000;
+  font-family: Barlow;
+}
+
+.userInfoFormWrap .formInput input {
+  font-size: 13px;
+}
+.userInfoFormWrap .formInput input::placeholder {
+  color: rgb(155, 155, 155);
+}
+
+.inputPlaceholder label {
+  position: absolute;
+  bottom: 8px;
+  left: 0px;
+  font-size: 13px;
+  letter-spacing: -0.5px;
+  color: rgb(155, 155, 155);
+  pointer-events: none;
+}
+.userInfoFormWrap .formRight label {
+  margin-right: 32px;
+  height: 19px;
+  font-size: 13px;
+  line-height: 19px;
+  letter-spacing: -0.5px;
+}
+.formRight .infoErrorMsg {
+  line-height: 17px;
+  margin-top: 4px;
+  font-size: 11px;
+  letter-spacing: -0.5px;
+  color: rgb(254, 79, 0);
+}
+.userInfoFormArea .formRight .formText {
+  font-family: Barlow;
+  font-size: 14px;
+  font-weight: 500;
+}
+.userInfoFormWrap .infoFormMsg {
+  margin-top: 4px;
+  font-size: 11px;
+  line-height: 17px;
+  letter-spacing: -0.5px;
+  color: rgb(98, 0, 240);
+}
+
+/* checkbox */
+.snsCheckbox {
+  position: relative;
+  display: inline-block;
+  height: 24px;
+}
+.snsCheckbox input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0px;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0px, 0px, 0px, 0px);
+  border: 0px;
+}
+.snsCheckbox input + label {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  user-select: none;
+}
+.receiveWrap input:not(:checked) + label {
+  color: rgb(155, 155, 155);
+}
+.snsCheckbox input + label::before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  line-height: 24px;
+  text-align: center;
+  vertical-align: middle;
+  margin-right: 8px;
+  background-image: url(./mypageManageImg/uncheck_round_icon.png);
+  background-size: cover;
+}
+.snsCheckbox input:checked + label::before {
+  background-image: url(./mypageManageImg/check_round_purple_icon.png);
+  background-size: cover;
+}
+.snsCheckbox label > span {
+  vertical-align: middle;
+}
+
+/* Date Pick */
+.reactDatepickerWrap {
+  display: inline-block;
+  padding: 0;
+  border: 0;
+}
+.reactDatepicker {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+.datepickBtn {
+  position: relative;
+  font-family: NotoSansCJKkr;
+  height: 36px;
+  line-height: 36px;
+  width: 308px;
+  font-size: 13px;
+  color: rgb(155, 155, 155);
+  letter-spacing: -0.5px;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-image: initial;
+  border-bottom: 1px solid rgb(217, 217, 217);
+  background-color: transparent;
+  text-align: left;
+  outline: none;
+}
+.datepickBtn img {
+  position: absolute;
+  top: 6px;
+  right: 0px;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+.formRight .genderWrap {
+  position: relative;
+}
+.formRight .genderWrap input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  border: 0px;
+}
+.formRight .genderWrap input + label {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  user-select: none;
+}
+.formRight .genderWrap input + label::before {
+  content: "";
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  line-height: 18px;
+  margin-right: 8px;
+  text-align: center;
+  vertical-align: top;
+  background-image: url(./mypageManageImg/radio-btn-off.png);
+  background-size: contain;
+}
+.formRight .genderWrap input:checked + label::before {
+  background-image: url(./mypageManageImg/radio-btn-on.png);
+}
+.userInfoFormArea .formRight .btnWrap {
+  margin-top: 32px;
+}
+.userInfoFormArea .formRight .btnWrap .submitBtn:disabled {
+  background-color: rgb(221, 221, 221);
+}
+.btnWrap .submitBtn {
+  width: 100%;
+}
+
+/*  */
+.formRight .userRemove {
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: -0.5px;
+}
+.formRight .userRemove button {
+  outline: none;
+  border: none;
+  background-color: transparent;
+  font-size: inherit;
+  letter-spacing: inherit;
+  color: inherit;
+  text-decoration: underline;
+  cursor: pointer;
+}
