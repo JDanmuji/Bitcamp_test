@@ -166,6 +166,12 @@ header {
     margin: 0px;
     width: 240px;
 }
+.adTitleText,
+.scTitleText {
+    font-size: 20px;
+    font-family: "Noto Sans KR", sans-serif;
+    margin-bottom: 10px;
+}
 .adBrandTextOnImg {
     position: relative;
     bottom: 30px;
@@ -175,8 +181,8 @@ header {
     margin-left: 10px;
 }
 .earthImg {
-    width: 15px;
-    height: 15px;
+    width: 17px;
+    height: 17px;
     margin-right: 5px;
 }
 .brandHoverContent {
@@ -187,7 +193,6 @@ header {
     font-family: "Barlow";
     color: #fff;
 }
-
 .arrowImgSection {
     width: 110px;
     height: 45px;
@@ -208,18 +213,15 @@ header {
     height: 250px;
 }
 .adTitleImg01:hover {
-    opacity: 0.5;
+    opacity: 0.7;
 }
 .topImg {
     width: 240px;
     height: 240px;
 }
-.adTitleText,
-.scTitleText {
-    font-size: 20px;
-    font-family: "Noto Sans KR", sans-serif;
+.scTotalArea {
+    margin-top: 30px;
 }
-
 .scBrand {
     display: flex;
     align-items: center;
@@ -278,6 +280,7 @@ header {
     width: 25px;
     height: 20px;
 }
+
 .lineTotal {
     display: flex;
     margin: 0;
