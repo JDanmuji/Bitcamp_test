@@ -286,34 +286,49 @@ main {
     color: #000;
 }
 
-/* filter toggle */
+/* filter toggle - brand filter */
 .filterToggle {
     display: flex;
     flex-direction: column;
+}
+.filterToggle {
     width: 400px;
     height: auto;
     border: 1px solid rgb(237, 237, 237);
     background-color: #fff;
     position: absolute;
     top: 100%;
-    right: 0;
+    right: -1px;
     z-index: 70;
 }
-.filterToggle > div {
+.filterMenu {
     display: flex;
-    justify-content: start;
-    align-items: center;
-    padding: 16px;
+    gap: 20px;
+}
+.filterMenu > p:first-child {
+    color: #000;
+}
+.filterMenu,
+.brandFilter {
+    padding: 12px 0;
+    margin: 0 16px;
     font-size: 14px;
     font-weight: 500;
     line-height: 24px;
-    color: rgb(217, 217, 217);
     border-bottom: 1px solid rgb(237, 237, 237);
 }
-.filterToggle > div:first-child {
-    gap: 20px;
+.brandFilter div:first-child {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 8px;
+    border-bottom: 1px solid rgb(237, 237, 237);
 }
-.filterToggle > div a:last-child {
+.filterMenu > p {
+    color: rgb(217, 217, 217);
+    cursor: pointer;
+}
+.filterMenu p:last-child {
     margin-left: auto;
 }
 .filterToggle .searchIcon {
@@ -323,7 +338,6 @@ main {
 }
 .filterToggle input {
     width: 100%;
-    padding: 9px 24px 8px 0px;
     overflow: visible;
     font-size: 16px;
     color: rgb(217, 217, 217);
@@ -343,10 +357,12 @@ main {
     font-weight: 500;
     letter-spacing: -0.5px;
 }
-.recommendBrand > div {
+.recommendBrand > a {
     display: flex;
     gap: 10px;
     align-items: center;
+    cursor: pointer;
+    color: #000;
 }
 .filterToggle .brandImg {
     width: 48px;
@@ -355,7 +371,6 @@ main {
     margin-right: 10px;
 }
 .filterToggle p {
-    color: #000;
     font-size: 14px;
     font-weight: bold;
     letter-spacing: -0.5px;
@@ -363,19 +378,58 @@ main {
 }
 .filterToggle button {
     border-radius: 2px;
-    outline: none;
     border: 1px solid transparent;
     text-align: center;
-    cursor: pointer;
-    background-color: rgb(0, 0, 0);
-    color: rgb(255, 255, 255);
+    background-color: #000;
+    color: #fff;
     font-size: 13px;
     font-weight: 500;
-    letter-spacing: -0.3px;
     padding: 2px 0;
-    width: 100%;
+    width: 380px;
     line-height: 40px;
-    margin-top: 10px;
+    margin: 10px;
+}
+
+/* filter toggle - color filter */
+.colorFilter {
+    display: none;
+    grid-template-columns: 1fr 1fr;
+    margin: 20px;
+    gap: 16px;
+}
+.colorFilter > p {
+    cursor: pointer;
+    color: #000;
+    font-weight: 400;
+}
+
+/* filter toggle - price filter */
+.priceFilter {
+    display: none;
+    flex-direction: column;
+    margin: 20px;
+    margin-bottom: 0;
+    gap: 16px;
+}
+.priceFilterChoice {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.priceFilterChoice > p {
+    font-weight: 400;
+}
+.priceFilterInput > input {
+    width: 80px;
+    padding: 4px;
+    font-size: 14px;
+    border: 1px solid rgb(237, 237, 237);
+    margin: 10px 4px 0 4px;
+}
+.priceFilterInput > button {
+    width: auto;
+    padding: 0 20px;
+    margin-left: 40px;
 }
 
 /* contents */
