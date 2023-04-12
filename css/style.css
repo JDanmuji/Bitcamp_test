@@ -197,7 +197,6 @@ header {
     width: 110px;
     height: 45px;
 }
-
 .arrowImg {
     width: 15px;
     height: 15px;
@@ -275,10 +274,15 @@ header {
     color: #a3a3a3;
     font-size: 13px;
 }
+.brandLikeBtn {
+    border: none;
+    background-color: transparent;
+    font-size: 0px;
+    cursor: pointer;
+}
 
-.heartImg {
-    width: 25px;
-    height: 20px;
+.likeFull {
+    display: none;
 }
 
 .lineTotal {
