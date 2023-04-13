@@ -6,6 +6,11 @@ body {
     line-height: 1.15;
 }
 
+/* header */
+.mainMenu a:first-child {
+    color: #000;
+}
+
 /* main */
 main {
     max-width: 1024px;
@@ -370,4 +375,49 @@ main {
     font-weight: bold;
     line-height: 15px;
     color: rgb(155, 155, 155);
+}
+
+/* footer */
+footer {
+    line-height: 18px;
+    font-size: 12px;
+    font-weight: 500;
+    min-width: 1024px;
+}
+.footer1 {
+    display: flex;
+    padding: 40px;
+    gap: 100px;
+    justify-content: space-between;
+    border-top: 1px solid rgb(237, 237, 237);
+    border-bottom: 1px solid rgb(237, 237, 237);
+}
+.footer1Left {
+    display: flex;
+    gap: 100px;
+}
+.footer1Left a {
+    min-width: 50px;
+}
+.footer1Left div {
+    min-width: 500px;
+}
+.footer1Left div ul {
+    font-weight: 400;
+    font-size: 11px;
+    color: #777;
+}
+.footer1Right {
+    display: flex;
+    gap: 100px;
+    min-width: 500px;
+}
+.footerChannels {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.footerChannels > div {
+    display: flex;
+    justify-content: space-between;
 }

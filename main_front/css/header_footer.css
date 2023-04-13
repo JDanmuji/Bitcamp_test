@@ -34,7 +34,6 @@ header {
 .mainMenu a:visited {
     color: inherit;
 }
-.mainMenu a:first-child,
 .mainMenu a:hover,
 .mainMenu a:active {
     color: #000;
@@ -56,6 +55,7 @@ header {
 }
 .authMenu {
     display: flex;
+    align-items: center;
     gap: 30px;
 
     font-family: Barlow;

@@ -10,7 +10,7 @@ body {
 main {
     max-width: 1024px;
     min-width: 1024px;
-    padding: 0px 30px;
+    padding: 20px 30px;
     margin: 0 auto;
 }
 .swiperSlide {
@@ -41,10 +41,6 @@ main {
 }
 .swiperPageTotal {
     color: rgb(155, 155, 155);
-}
-.authMenu {
-    display: flex;
-    align-items: center;
 }
 
 /* main - mini menu */
