@@ -19,6 +19,9 @@ header {
     background-color: rgb(255, 255, 255);
     margin-bottom: 30px;
 }
+a {
+    color: black;
+}
 .headerWrap {
     display: flex;
     position: relative;
@@ -224,7 +227,9 @@ header {
 .scBrand {
     display: flex;
     align-items: center;
-    margin: 0;
+    box-shadow: rgb(229, 229, 229) 0px -0.5px 0 0 inset;
+    height: 160px;
+    width: 450px;
 }
 .scMenuArea {
     display: flex;
@@ -283,17 +288,6 @@ header {
 
 .likeFull {
     display: none;
-}
-
-.lineTotal {
-    display: flex;
-    margin: 0;
-}
-.line1 {
-    margin: 0;
-}
-.line2 {
-    margin: 0 50px;
 }
 
 .lineImg {
