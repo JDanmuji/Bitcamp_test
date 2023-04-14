@@ -1,13 +1,3 @@
-// header search modal
-$(function () {
-    $(".search").on("click", function (event) {
-        $(".searchModal").css("display", "block");
-    });
-    $(".closeBtn").on("click", function (event) {
-        $(".searchModal").css("display", "none");
-    });
-});
-
 // Show the first category when the page loads
 $(".categoryWrap:not(:first)")
     .find(".categoryToggle")
@@ -34,6 +24,7 @@ $(function () {
 $(".filterToggle").toggle(0);
 $(function () {
     $(".filterBox > span:nth-child(3)").on("click", function (event) {
+        $(".filterMenu > p:nth-child(1)").click();
         $(".filterToggle").toggle(0);
     });
 });
@@ -61,4 +52,12 @@ $(".filterMenu > p:nth-child(4)").click(function (event) {
     $(".filterToggle").toggle(0);
     $(this).css("color", "#d9d9d9");
     $(".filterMenu > p:nth-child(1)").click();
+});
+
+// brand filter search input
+$(".brandFilter > div > input").on("focus", function (event) {
+    $(this).attr("value", "");
+});
+$(".brandFilter > div > input").on("blur", function (event) {
+    $(this).attr("value", "브랜드명을 입력해 주세요");
 });
