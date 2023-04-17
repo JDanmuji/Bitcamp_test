@@ -1,0 +1,1191 @@
+* {
+    font-family: "Noto Sans KR", sans-serif;
+}
+
+header {
+    position: sticky;
+    top: 0px;
+    left: 0px;
+    z-index: 90;
+    width: 100%;
+    height: 80px;
+    min-width: 1024px;
+    box-shadow: rgb(237, 237, 237) 0px 1px 0px 0px;
+    background-color: rgb(255, 255, 255);
+}
+
+body {
+    margin: 0 auto;
+    line-height: 1.15;
+    
+}
+
+div {
+    display: block;
+}
+
+img {
+    overflow-clip-margin: content-box;
+    overflow: clip;
+}
+
+ul, li, p, button {
+    padding: 0px;
+}
+
+ul {
+    margin: 0px;
+    list-style: none;
+}
+
+ul, li, p, button {
+    padding: 0px;
+}
+
+table {
+    border-collapse: separate;
+    text-indent: initial;
+    border-spacing: 2px;
+}
+
+tbody {
+    display: table-row-group;
+    vertical-align: middle;
+    border-color: inherit;
+}
+
+.headerWrap {
+    display: flex;
+    position: relative;
+    align-items: center;
+    padding: 20px 70px;
+}
+
+.amondzLogo {
+    width: 134px;
+    margin-right: 80px;
+}
+.mainMenu {
+    display: flex;
+    gap: 40px;
+
+    font-size: 15px;
+    font-weight: bold;
+    color: rgb(155, 155, 155);
+    line-height: 22px;
+    letter-spacing: -0.5px;
+}
+.mainMenu a:link,
+.mainMenu a:visited {
+    color: inherit;
+}
+.mainMenu a:first-child,
+.mainMenu a:hover,
+.mainMenu a:active {
+    color: #000;
+}
+.search {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 345px;
+    padding: 8px 0px;
+    margin: 0 auto;
+    border-bottom: 1px solid rgb(237, 237, 237);
+    color: rgb(155, 155, 155);
+    cursor: pointer;
+}
+.search img {
+    width: 20px;
+    height: 20px;
+}
+.authMenu {
+    display: flex;
+    gap: 30px;
+
+    font-family: Barlow;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 22px;
+    letter-spacing: -0.3px;
+    color: rgb(155, 155, 155);
+}
+
+/* search modal */
+.searchModal {
+    display: none;
+    position: absolute;
+    margin: 0 auto;
+    top: 0;
+    right: 0;
+    left: 0;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: rgba(197, 197, 197, 0.5) 0px 2px 11px 0px;
+    min-width: 600px;
+    max-width: 650px;
+    height: auto;
+    padding: 20px 16px 40px;
+}
+.searchForm {
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 8px 0px;
+    margin: 0 auto;
+    padding-bottom: 20px;
+    color: rgb(155, 155, 155);
+    cursor: pointer;
+    border: none;
+}
+.searchForm form {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    width: 100%;
+    border-bottom: 1px solid rgb(237, 237, 237);
+}
+.searchForm input {
+    width: 100%;
+    color: #ccc;
+    font-size: 16px;
+    padding-top: 8px;
+    padding-bottom: 4px;
+}
+.searchForm img {
+    width: 20px;
+    height: 20px;
+}
+.closeBtn {
+    width: 50px;
+    font-weight: normal;
+    line-height: 1.5;
+    letter-spacing: -0.5px;
+    color: rgb(155, 155, 155);
+    font-size: 16px;
+}
+.searchModal p {
+    font-size: 18px;
+    margin-bottom: 16px;
+}
+.searchRecommend {
+    display: flex;
+    gap: 10px;
+}
+.searchRecommend > div {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+}
+.searchRecommend img {
+    width: 115px;
+    height: 115px;
+    margin-bottom: 10px;
+}
+.searchRecommend span {
+    font-size: 13px;
+    line-height: 19px;
+    letter-spacing: -0.5px;
+}
+
+/* main */
+main {
+    max-width: 1024px;
+    min-width: 1024px;
+    max-height: 2000px;
+    min-height: 2000px;
+    padding: 0 30px;
+    margin: 0 auto;
+    display: flex;
+}
+
+.mainSection {
+    padding: 0 60px;
+    width: 80%;
+    height: 1000px;
+    position: relative;
+}
+
+.paymentMain1 {
+    display: flex;
+    flex-direction: column;
+    -webkit-box-align: center;
+    align-items: center;
+    max-width: 1200px;
+    min-height: calc(100vh - 73px);
+    margin: 0px auto;
+    padding-top: 40px;
+    padding-bottom: 118px;
+    font-family: NotoSansCJKkr;
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+    box-shadow: rgba(125, 125, 125, 0.05) 0px 0px 15px 0px;
+}
+
+.paymentMain2 {
+    width: 964px;
+}
+
+.paymentMain3 {
+    height: 59px;
+    margin-bottom: 40px;
+    font-family: Barlow;
+}
+
+.paymentProductInfo {
+    line-height: 56px;
+}
+
+.title {
+    display: inline-block;
+    font-size: 40px;
+    font-weight: bold;
+    letter-spacing: -1px;
+    color: rgb(0, 0, 0);
+    line-height: 3;
+}
+
+form {
+    display: block;
+    margin-top: 0em;
+}
+
+.paymentProductTable {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: Barlow;
+}
+
+.paymentProductTable {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: Barlow;
+}
+
+thead {
+    display: table-header-group;
+    vertical-align: middle;
+    border-color: inherit;
+}
+
+thead tr:first-child {
+    border-top: 1px solid rgb(0, 0, 0);
+}
+
+thead tr th {
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: -0.5px;
+}
+
+td {
+    display: table-cell;
+    vertical-align: inherit;
+}
+
+thead tr:first-child th.storeName {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: left;
+}
+
+thead tr:first-child th.count {
+    width: 96px;
+    text-align: center;
+}
+
+thead tr:first-child th.benefit {
+    width: 166px;
+    text-align: center;
+}
+
+thead tr:first-child th.price {
+    width: 140px;
+    text-align: center;
+}
+
+thead tr:last-child {
+    border-bottom: 1px solid rgb(237, 237, 237);
+}
+
+tbody tr td {
+    text-align: center;
+    padding: 24px 0px;
+}
+
+tbody tr td.productInfoBox {
+    text-align: left;
+}
+
+tbody tr:last-child div.productInfoImgOrderSize {
+    margin-right: 16px;
+    float: left;
+    vertical-align: top;
+}
+
+.productInnerImgBox {
+    box-sizing: border-box;
+    display: inline-block;
+    overflow: hidden;
+    width: initial;
+    height: initial;
+    background: none;
+    opacity: 1;
+    border: 0px;
+    margin: 0px;
+    padding: 0px;
+    max-width: 100%;
+}
+
+.productImg {
+    box-sizing: border-box;
+    display: block;
+    width: initial;
+    height: initial;
+    background: none;
+    opacity: 1;
+    border: 0px;
+    margin: 0px;
+    padding: 0px;
+    max-width: 100%;
+}
+
+span.productImg img {
+    inset: 0px;
+    box-sizing: border-box;
+    padding: 0px;
+    border: none;
+    margin: auto;
+    display: block;
+    width: 100px;
+    height: 100px;
+    min-width: 100%;
+    max-width: 100%;
+    min-height: 100%;
+    max-height: 100%;
+    border-radius: 2px;
+}
+
+
+
+tbody tr:last-child {
+    border-bottom: 1px solid rgb(237, 237, 237);
+}
+
+
+div.productInfo {
+    display: inline-block;
+    vertical-align: top;
+    width: calc(100% - 116px);
+    float: right;
+}
+
+div.productName {
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: -0.5px;
+    word-break: break-all;
+}
+
+div.productOption {
+    margin-bottom: 6px;
+    font-size: 12px;
+    color: rgb(155, 155, 155);
+    line-height: 20px;
+    letter-spacing: -0.3px;
+    word-break: break-all;
+}
+
+div.productCountAndPrice {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    height: 17px;
+}
+
+
+.productBundleTotalPrice {
+    padding-top: 13px;
+    text-align: right;
+    font-weight: bold;
+}
+
+td.productBundleTotalPrice .productPrice .amount {
+    font-size: 14px;
+    font-weight: bold;
+    
+}
+
+td.productBundleTotalPrice .productPrice .unit {
+    font-size: 11px;
+    vertical-align: middle;
+    
+}
+
+.productCount .amount {
+    font-size: 14px;
+    font-weight: 600;
+    font-family: Barlow;
+    
+    
+}
+
+.productCount .unit {
+    font-size: 14px;
+    font-weight: 600;
+    font-family: Barlow;
+}
+
+.discountBenefit .applyCouponInfo {
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: -0.5px;
+    border-bottom: 1px solid rgb(0, 0, 0);
+    cursor: pointer;
+}
+
+.orderPrice .amount {
+    font-family: Barlow;
+    font-weight: bold;
+}
+
+.orderPrice .unit {
+    font-size: 11px;
+    font-weight: 500;
+    vertical-align: middle;
+}
+
+
+.productPrice span:not(.amount) {
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: -0.5px;
+    
+}
+
+.productCountAndPrice .productPrice .amount {
+    font-family: Barlow;
+    font-weight: bold;
+    color :rgb(0, 0, 0);
+}
+
+.productPrice span {
+    
+    color: rgb(155, 155, 155);
+}
+
+.totalPriceAmount {
+    font-size: 16px;
+    font-weight: 600;
+    font-family: Barlow;
+}
+
+tfoot {
+    display: table-footer-group;
+    vertical-align: middle;
+    border-color: inherit;
+}
+
+tfoot tr {
+    display: table-row;
+    vertical-align: inherit;
+    border-color: inherit;
+}
+
+tfoot td {
+    padding-top: 13px;
+    text-align: right;
+}
+
+.bothSideInfoWrap {
+    margin-top: 80px;
+    width: 100%;
+    position: relative;
+    z-index: 1;  
+}
+
+.paymentCheckOutOrderInfo {
+    width: calc(100% - 348px);
+}
+
+.paymentCheckOutOrderInfoBaseSection {
+    width: 100%;
+    color: rgb(0, 0, 0);
+    font-family: NotoSansCJKkr;
+}
+
+.paymentCheckOutOrderInfoBaseSection:not(:first-child) {
+    margin-top: 56px;
+}
+
+.paymentCheckOutOrderInfoBaseSectionHead {
+    margin-bottom: 24px;
+    letter-spacing: -0.5px;
+    border-top: 1px solid rgb(0, 0, 0);
+    border-bottom: 1px solid rgb(237, 237, 237);
+}
+
+.paymentCheckOutOrderInfoBaseSectionTitle {
+    display: inline-block;
+    margin: 12px 0px;
+    height: 29px;
+    line-height: 29px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.paymentCheckOutOrderInfoBaseSectionEditBtn {
+    position: relative;
+    display: inline-block;
+    float: right;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: pointer;
+    height: 53px;
+    line-height: 53px;
+}
+
+.paymentCheckOutOrderInfoBaseSectionEditBtn span{
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.paymentCheckOutOrderInfoBaseSectionEditBtn img{
+    display: inline-block;
+    vertical-align: middle;
+    width: 16px;
+    height: 16px;
+}
+
+.buyerInfo {
+    font-size: 14px;
+}
+
+.buyerInfo .buyerName {
+    margin-bottom: 16px;
+    font-weight: bold;
+    line-height: 24px;
+    letter-spacing: -0.5px;
+}
+
+.buyerInfo .buyerCellPhone {
+    line-height: 17px;
+    font-family: Barlow;
+    margin-bottom: 4px;
+    font-weight: 600;
+}
+
+.paymentCheckOutOrderInfoBaseSection .buyerEmail {
+    line-height: 17px;
+    font-family: Barlow;
+}
+
+.deliveryMainInfo .deliveryMainRecipient {
+    margin-bottom: 16px;
+    font-weight: bold;
+    line-height: 24px;
+    letter-spacing: -0.5px;
+}
+
+.deliveryMainInfo .deliveryMainCellPhone {
+    line-height: 17px;
+    font-family: Barlow;
+    margin-bottom: 4px;
+    font-weight: 600;
+}
+
+.deliveryMainInfo .deliveryMainAddress {
+    line-height: 22px;
+    font-size: 13px;
+    letter-spacing: -0.5px;
+}
+
+.deliveryMessageTypeDropDown {
+    margin-bottom: 24px;
+}
+
+.deliveryMessageTypeDropDown > div {
+    position: relative;
+    cursor: pointer;
+}
+
+.dropDownSelect {
+    border: 1px solid rgb(225, 225, 225);
+    position: relative;
+    padding: 11px 15px 11px;
+    height: 20-px;
+}
+
+.dropDownSelect .dropDownSelectLabel{
+    display: inline-block;
+    width: calc(100% - 27px);
+    line-height: 19px;
+    font-size: 13px;
+    letter-spacing: -0.5px;
+    z-index: 100;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.dropDownSelect img {
+    position: absolute;
+    top: 14px;
+    right: 16px;
+    width: 12px;
+    height: 12px;
+}
+
+
+.deliveryMessageTypeDropDown > div.active dropDownOverContainer {
+    display: none;
+    border: 1px solid rgb(0, 0, 0);
+}
+
+.registerBaseDeliveryAddress {    
+    margin-bottom: 32px;
+}
+
+.dropDownSelectListWrap {
+    display: none;
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    background: rgb(255, 255, 255);
+    z-index: 100;
+    font-family: NotoSansCJKkr;
+    border: 1px solid rgb(0, 0, 0);
+}
+
+.dropDownSelectTitle {
+    border-bottom: 1px solid rgb(225, 225, 225);
+    position: relative;
+    padding: 11px 15px 11px;
+    height: 20px;
+}
+
+
+
+.dropDownSelectTitle .dropDownSelectLabel {
+    display: inline-block;
+    width: calc(100% - 27px);
+    line-height: 19px;
+    font-size: 13px;
+    letter-spacing: -0.5px;
+    z-index: 100;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.dropDownSelectListPlain {
+    height: 201px;
+    overflow: auto;
+    max-height: 320px;
+}
+
+.dropDownSelectListPlain li {
+    padding: 10px 15px;
+    line-height: 19px;
+    font-size: 13px;
+    letter-spacing: -0.5px;
+}
+
+.dropDownSelectListPlain li:not(:last-child) {
+    border-bottom: 1px solid rgb(247, 247, 247);
+}
+
+
+
+
+.registerBaseDeliveryAddressCheckBox {
+    position: relative;
+    display: inline-block;
+    height: 24px;
+}
+
+.registerBaseDeliveryAddressCheckBox input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0px;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0px, 0px, 0px, 0px);
+    border: 0px;
+}
+
+.registerBaseDeliveryAddressCheckBox input[type="checkbox"] {
+    box-sizing: border-box;
+    padding: 0px;
+}
+
+.registerBaseDeliveryAddressCheckBox input + label{
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    user-select: none;
+}
+
+.registerBaseDeliveryAddressCheckBox input:checked + label::before{
+    background-image: url(../images/check_round_purple_icon.png);
+    background-size: cover;
+}
+
+.registerBaseDeliveryAddressCheckBox input + label::before{
+    content: " ";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    line-height: 24px;
+    text-align: center;
+    vertical-align: middle;
+    margin-right: 8px;
+    background-image: url(../images/uncheck_round_icon.png);
+    background-size: cover;
+}
+
+.registerBaseDeliveryAddressCheckBox label span{
+    font-size: 13px;
+    letter-spacing: -0.5px;
+    vertical-align: middle;
+}
+
+
+
+
+.applyPointInfo > label {
+    display: inline-block;
+    font-size: 13px;
+    font-weight: 500px;
+    letter-spacing: -0.5px;
+    pointer-events: none;  
+}
+
+.applyPoint {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.applyPoint input {
+    width: calc(100% - 11px);
+}
+
+
+.applyPointInfo div input {
+    width: 100%;
+    padding: 9px 24px 8px 0px;
+    font-size: 13px;
+    border-top: 0;
+    border-right: none;
+    border-left: none;
+    border-image: initial;
+    border-bottom: 1px solid rgb(237, 237, 237);
+    outline: none;
+    background: transparent;
+    color: rgb(0, 0, 0);
+}
+
+
+
+.applyPointInfo .add-on {
+    top: 6px;
+    right: 0px;
+    z-index: 10;
+}
+
+.totalHoldingPoint {
+    margin-top: 16px;
+}
+
+.totalHoldingPoint .text{
+    margin-right: 4px;
+    font-size: 13px;
+    letter-spacing: -0.5px;
+}
+
+
+.totalHoldingPoint .amount{
+    font-size: 16px;
+    font-weight: bold;
+    color: rgb(98, 0, 240);
+    font-family: Barlow;
+}
+
+.payMethodGrid {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 14px;
+}
+
+.payMethodGrid .buttonBox{ 
+    height: 94px;
+    border-radius: 2px;
+}
+
+.payMethodGrid .buttonBox label { 
+    display: flex;
+    flex-direction: column;
+    -webkit-box-align: center;
+    align-items: center;
+    position: relative;
+    
+    width: 100%;
+    height: 100%;
+    color: rgb(155, 155, 155);
+    background-color: rgb(255, 255, 255);
+    border: 1.3px solid rgb(237, 237, 237);
+    cursor: pointer;
+    outline: none;
+    line-height: 5;
+}
+
+.payMethodGrid .buttonBox input {
+    display: none;
+}
+
+.payMethodGrid .buttonBox label.checked{ 
+    border: 1px solid rgb(0, 0, 0);
+}
+
+.payMethodGrid .buttonBox label img{ 
+    width: 100%;
+}
+
+.payMethodGrid .buttonBox label .payMethodDesciption {
+    display: flex;
+    flex-direction: column;
+    -webkit-box-align: center;
+    align-items: center;
+    width: max-content;
+    position: absolute;
+    top: 52px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: rgb(0, 0, 0);
+    font-size: 12px;
+    letter-spacing: -0.3px;
+    line-height: 18px;
+}
+
+.payMethodGrid .buttonBox label .payMethodDesciption .benefit {
+    font-size: 11px;
+    color: rgb(98, 0, 240);
+    font-weight: 500;
+    letter-spacing: -0.3px;
+    line-height: 17px;
+}
+
+button, [type="button"], [type="reset"], [type="submit"] {
+    appearance: button;
+}
+
+.paymentComment {
+    font-size: 13px;
+    height: auto;
+    margin-top: 24px;
+    margin-bottom: 24px;
+    padding: 16px;
+    background-color: rgb(247, 247, 247);
+    display: flex;
+    flex-direction: column;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+}
+
+
+.paymentComment .infoText {
+    display: flex;
+    line-height: 1.5;
+    position: relative;
+    padding-left: 8px;
+}
+
+.paymentComment .infoText::before {
+    content: "";
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    background-color: rgb(0, 0, 0);
+    position: absolute;
+    left: 0px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.paymentCheckOutSummaryInfo {
+    margin-left: 40px;
+    padding: 24px 32px;
+    width: 250px;
+    height: 388px;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    border: 1px solid rgb(0, 0, 0);
+}
+
+.paymentCheckOutSummaryInfo {
+    position: absolute;
+    top: 0px;
+    margin: 0px 0px 0px 40px;
+    
+    bottom: auto;
+}
+
+.paymentCheckOutSummaryInfo.fixed {
+    position: fixed;
+    top: 104px;
+    margin: 0px;
+    left: 1075px;
+    bottom: auto;
+}
+
+.paymentCheckOutSummaryTitle {
+    padding-bottom: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 29px;
+    letter-spacing: -0.5px;
+    border-bottom: 1px solid rgb(0, 0, 0);
+}
+
+.paymentCheckOutSummaryDetail {
+    padding: 20px 0px;
+    border-bottom: 1px solid rgb(237, 237, 237);
+}
+
+.paymentCheckOutSummaryDetail > div {
+    height: 22px;
+    line-height: 22px;
+}
+
+.paymentCheckOutSummaryDetail > div:not(:last-child) {
+    margin-bottom: 12px;
+}
+
+.paymentCheckOutSummaryDetail > div .label{
+    font-size: 13px;
+    letter-spacing: -0.5px;
+}
+
+.paymentCheckOutSummaryInfo .amount{
+    float: right;
+    font-family: Barlow;
+    font-weight: 500;
+}
+
+
+.paymentCheckOutSummaryDetail > div .amount{
+    font-size: 15px;
+}
+
+.paymentCheckOutSummaryPrice {
+    padding: 27px 0px 18px;
+    line-height: 29px;
+}
+
+.paymentCheckOutSummaryPrice .label{
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: -0.5px;
+}
+
+.paymentCheckOutSummaryPrice .amount{
+    font-size: 24px;
+    color: rgb(98, 0, 240);
+    font-weight: bold;
+}
+
+.paymentCheckOutSavingPoint {
+    line-height: 22px;
+}
+
+.paymentCheckOutSavingPoint .label{ 
+    font-size: 13px;
+    letter-spacing: -0.5px;
+    color: rgb(155, 155, 155);
+}
+
+.paymentCheckOutSavingPoint .amount{ 
+    font-size: 15px;
+}
+
+.borderLine {    
+    width: calc(100% - 348px);
+    margin-top: 24px;
+    height: 1px;
+    background-color: rgb(237, 237, 237);
+}
+
+.orderPaymentAgreeTerm {
+    position: relative;
+    width: calc(100% - 348px);
+    margin-top: 17px;
+}
+
+.orderPaymentAgreeTermCheckBox {
+    width: 100%;
+    margin-bottom: 23px;
+    line-height: 22px;
+    position: relative;
+    display: inline-block;
+    height: 24px;
+}
+
+.orderPaymentAgreeTermCheckBox input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0px;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0px, 0px, 0px, 0px);
+    border: 0px;
+}
+
+[type="checkbox"], [type="radio"] {
+    box-sizing: border-box;
+    padding: 0px;
+}
+
+.orderPaymentAgreeTerm {
+    width: max-content;
+}
+
+.orderPaymentAgreeTermCheckBox input + label{
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    user-select: none;
+}
+
+.orderPaymentAgreeTermCheckBox input + label::before{
+    content: " ";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    line-height: 24px;
+    text-align: center;
+    vertical-align: middle;
+    margin-right: 8px;
+    background-image: url(../images/uncheck_round_icon.png);
+    background-size: cover;
+}
+
+
+.orderPaymentAgreeTermCheckBox input:checked + label::before {
+    background-image: url(../images/check_round_purple_icon.png);
+    background-size: cover;
+}
+
+.orderPaymentAgreeTermCheckBox label > span{
+    vertical-align: middle;
+    font-size: 13px;
+    letter-spacing: -0.5px;
+}
+
+.orderPaymentAgreeTermErrorMessage {
+    position: absolute;
+    top: 22px;
+    left: 28px;
+}
+
+.subTextWrapper {
+    padding-left: 28px;
+}
+
+.orderPaymentAgreeTermSubText {
+    font-size: 12px;
+    color: rgb(155, 155, 155);
+    line-height: 1.5;
+    letter-spacing: -0.1px;
+    margin-top: 5px;
+}
+
+.orderPaymentBtnSection {
+    margin-top: 40px;
+    width: calc(100% - 348px);
+}
+
+
+.orderPaymentBtnSection button {
+    width: 100%;
+    height: 48px;
+    line-height: 48px;
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: -0.5px
+   
+}
+
+.payment {
+    border-radius: 2px;
+    outline: none;
+    border: 1px solid transparent;
+    text-align: center;
+    cursor: pointer;
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: -0.3px;
+    height: 40px;
+    width: 181px;
+    line-height: 40px;
+}
+
+
+
+
+
+
+/* footer */
+footer {
+    line-height: 18px;
+    font-size: 12px;
+    font-weight: 500;
+    min-width: 1024px;
+}
+.footer1 {
+    display: flex;
+    padding: 40px;
+    gap: 100px;
+    justify-content: space-between;
+    border-top: 1px solid rgb(237, 237, 237);
+    border-bottom: 1px solid rgb(237, 237, 237);
+}
+.footer1Left {
+    display: flex;
+    gap: 100px;
+}
+.footer1Left a {
+    min-width: 50px;
+}
+.footer1Left div {
+    min-width: 500px;
+}
+.footer1Left div ul {
+    font-weight: 400;
+    font-size: 11px;
+    color: #777;
+}
+.footer1Right {
+    display: flex;
+    gap: 100px;
+    min-width: 500px;
+}
+.footerChannels {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.footerChannels > div {
+    display: flex;
+    justify-content: space-between;
+}
