@@ -131,6 +131,7 @@ header {
 .searchRecommend {
     display: flex;
     gap: 10px;
+    cursor: pointer;
 }
 .searchRecommend > div {
     display: flex;

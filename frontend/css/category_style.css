@@ -176,7 +176,7 @@ main {
     line-height: 24px;
     border-bottom: 1px solid rgb(237, 237, 237);
 }
-.brandFilter div:first-child {
+.brandFilterSearchDiv {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -305,6 +305,7 @@ main {
 .priceFilterInput > input {
     width: 80px;
     font-size: 14px;
+    color: #999;
     padding: 10px 8px;
     border: 1px solid rgb(237, 237, 237);
     margin: 10px 4px 0 4px;
