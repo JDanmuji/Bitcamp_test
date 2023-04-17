@@ -37,10 +37,10 @@ main {
     font-family: "Barlow", sans-serif;
 }
 .swiperPageCurrent {
-    color: rgb(255, 255, 255);
+    color: #fff;
 }
 .swiperPageTotal {
-    color: rgb(155, 155, 155);
+    color: #9b9b9b;
 }
 
 /* main - mini menu */
@@ -126,7 +126,7 @@ article a:active {
     margin-top: 16px;
 }
 .percentage {
-    color: rgb(98, 0, 240);
+    color: #6200f0;
 }
 .price {
     margin: 0 10px 0 4px;

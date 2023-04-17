@@ -26,6 +26,11 @@ $(function () {
     $(".filterBox > span:nth-child(3)").on("click", function (event) {
         $(".filterMenu > p:nth-child(1)").click();
         $(".filterToggle").toggle(0);
+
+        // input value 초기화
+        $(".brandFilter > div > input").val("브랜드명을 입력해 주세요");
+        $(".priceFilterInput > input:first").val("2,000");
+        $(".priceFilterInput > input:last").val("9,999,999");
     });
 });
 
@@ -52,11 +57,6 @@ $(".filterMenu > p:nth-child(4)").click(function (event) {
     $(".filterToggle").toggle(0);
     $(this).css("color", "#d9d9d9");
     $(".filterMenu > p:nth-child(1)").click();
-
-    // input value 초기화
-    $(".brandFilter > div > input").val("브랜드명을 입력해 주세요");
-    $(".priceFilterInput > input:first").val("2,000");
-    $(".priceFilterInput > input:last").val("9,999,999");
 });
 
 // brand filter search input
@@ -70,8 +70,5 @@ $(".brandFilter > div > input").on("blur", function (event) {
     if ($(this).val() == "") {
         $(this).val("브랜드명을 입력해 주세요");
     }
-    $(".brandFilterSearchDiv").css(
-        "border-bottom",
-        "1px solid rgb(237, 237, 237)"
-    );
+    $(".brandFilterSearchDiv").css("border-bottom", "1px solid #ededed");
 });
