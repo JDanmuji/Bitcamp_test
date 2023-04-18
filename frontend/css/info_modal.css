@@ -1,0 +1,75 @@
+.refundInfo,
+.asInfo {
+    cursor: pointer;
+}
+
+section.modalBackground {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+.infoModal {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 500px;
+    height: 100vh;
+    border-radius: 2px;
+    background-color: #fff;
+
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: -0.5px;
+}
+
+.stickyTitle {
+    position: sticky;
+    display: flex;
+    justify-content: space-between;
+    padding: 26px 24px;
+}
+.infoModalContent {
+    overflow-y: scroll;
+    padding: 0 24px 26px;
+}
+
+.infoModal > div:nth-child(4) {
+    border-bottom: none;
+}
+.infoModal h2 {
+    font-weight: 700;
+    font-size: 16px;
+}
+.infoModalContent .paddingBottom {
+    padding-bottom: 26px;
+    border-bottom: 1px solid rgb(237, 237, 237);
+}
+.infoModalContent h2 {
+    padding-top: 26px;
+    border-top: 1px solid rgb(237, 237, 237);
+}
+
+.infoModal h3 {
+    margin-bottom: 8px;
+    margin-top: 24px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 24px;
+}
+.infoModal p {
+    font-size: 13px;
+    color: rgb(102, 102, 102);
+    line-height: 22px;
+}
+
+.modalCloseBtn {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}

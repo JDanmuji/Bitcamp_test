@@ -79,6 +79,13 @@ acronym {
 }
 
 /* 추가한 reset */
+* {
+    font-family: "Noto Sans KR", sans-serif;
+}
+body {
+    margin: 0 auto;
+    line-height: 1.15;
+}
 input {
     border: none;
     outline: none;

@@ -1,0 +1,127 @@
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>review button</title>
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/info_modal.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow:wght@500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <p class="refundInfo">&#9654; 교환 및 반품 정보</p>
+    <p class="asInfo">&#9654; A/S 정보</p>
+
+    <section class="modalBackground">
+      <div class="infoModal refundModal">
+        <div class="stickyTitle">
+          <h2>배송 관련 안내</h2>
+          <img
+            class="modalCloseBtn"
+            src="modal_images/modal_close_btn.png"
+            alt="closing icon"
+          />
+        </div>
+        <div class="infoModalContent">
+          <h3>배송비</h3>
+          <p>아몬즈는 전상품 무료배송입니다</p>
+
+          <h3>추가 배송비</h3>
+          <p>제주 및 도서산간 지역은 배송비가 별도로 부과됩니다.</p>
+          <p class="paddingBottom">
+            - 제주도 : 3,000원 / 그 외 도서산간 지역 : 3,000원
+          </p>
+
+          <h2>반품 / 교환 안내</h2>
+          <h3>반품 / 교환 안내</h3>
+          <p>
+            어나더셀의 모든 제품은 주문제작으로 진행되어 주문 후 사이즈 변경 및
+            환불이 어려운 참고 부탁드립니다.
+          </p>
+          <p>
+            하단의 명시된 두 경우를 제외한 교환 및 환불이 어려운점 참고
+            부탁드립니다.
+          </p>
+          <p>
+            - 수령 받은 제품의 수작업 공정상 발생할 수 있는 미세 스크레치,
+            이음새 자국은 불량에 포함되지 않습니다.
+          </p>
+          <p>- 주문건과 다른 오배송</p>
+
+          <h3>반품 / 교환 불가사유</h3>
+          <p>상품상세 참조</p>
+
+          <h3>반품 사유에 따른 환불정보</h3>
+          <h3>- 단순 변심이나 구매자의 사유로 인한 반품 시 :</h3>
+          <p>왕복 배송비를 차감하여 환불해드립니다.</p>
+          <p>(도서산간 지역의 경우, 도서산간 추가배송비 부과)</p>
+
+          <h3>- 제품의 하자나 기타 브랜드의 과실로 인한 반품 시 :</h3>
+          <p>전액 환불해드립니다.</p>
+
+          <h3>- 반품/교환 시 택배 발송 방법 :</h3>
+          <p>
+            상품을 받으신 택배사/송장번호로 반품 접수 해주세요. 다른 택배사로
+            반품 접수하실 경우, 해당 반송 비용은 판매자가 책임지지 않습니다.
+          </p>
+
+          <!-- <h3>반품 / 교환 시 보내실 곳</h3>
+          <p>서울 마포구 서강로11길 27 지하</p> -->
+        </div>
+      </div>
+
+      <div class="infoModal asModal">
+        <div class="stickyTitle">
+          <h2>A/S 정보</h2>
+          <img
+            class="modalCloseBtn"
+            src="modal_images/modal_close_btn.png"
+            alt="closing icon"
+          />
+        </div>
+        <div class="infoModalContent"></div>
+      </div>
+    </section>
+
+    <script
+      type="text/javascript"
+      src="http://code.jquery.com/jquery-3.6.4.min.js"
+    ></script>
+    <script type="text/javascript">
+      $(function () {
+        $(".refundInfo").on("click", function (event) {
+          $("section.modalBackground").css("display", "flex");
+          $(".asModal").css("display", "none");
+          $(".refundModal").css("display", "flex");
+        });
+
+        $(".asInfo").on("click", function (event) {
+          $("section.modalBackground").css("display", "flex");
+          $(".asModal").css("display", "flex");
+          $(".refundModal").css("display", "none");
+        });
+
+        $(".modalCloseBtn").on("click", function (event) {
+          $("section.modalBackground").css("display", "none");
+
+          // 별점 아이콘 초기화
+          $(".reviewStarIcon").attr(
+            "src",
+            "modal_images/product_review_star_on.png"
+          );
+          // textarea 초기화
+          $(".reviewWriteDiv textarea").val("");
+          // 등록버튼 초기화
+          $(".reviewWriteBtn").css("background-color", "#ddd");
+        });
+      });
+    </script>
+  </body>
+</html>

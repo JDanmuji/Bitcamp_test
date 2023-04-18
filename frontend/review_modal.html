@@ -1,0 +1,141 @@
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>review button</title>
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/review_modal.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow:wght@500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <section class="mypageSection">
+      <h3>주문내역</h3>
+      <div class="orderListSection">
+        <button class="reviewModalBtn">후기작성</button>
+      </div>
+    </section>
+
+    <section class="modalBackground">
+      <div class="reviewModal">
+        <div>
+          <h2>상품 후기 작성</h2>
+          <img
+            class="modalCloseBtn"
+            src="modal_images/modal_close_btn.png"
+            alt="closing icon"
+          />
+        </div>
+
+        <div>
+          <p>평점을 입력해 주세요</p>
+          <div class="reviewStars">
+            <img
+              class="reviewStarIcon"
+              src="modal_images/product_review_star_on.png"
+            />
+            <img
+              class="reviewStarIcon"
+              src="modal_images/product_review_star_on.png"
+            />
+            <img
+              class="reviewStarIcon"
+              src="modal_images/product_review_star_on.png"
+            />
+            <img
+              class="reviewStarIcon"
+              src="modal_images/product_review_star_on.png"
+            />
+            <img
+              class="reviewStarIcon"
+              src="modal_images/product_review_star_on.png"
+            />
+          </div>
+        </div>
+
+        <div class="reviewWriteDiv">
+          <p>상품은 어떠셨나요?</p>
+          <textarea
+            placeholder="내용을 입력해 주세요. (최소 5자/최대 2000자)"
+          ></textarea>
+        </div>
+
+        <div class="reviewPhotoDiv">
+          <label for="file">
+            <div class="photoUploadBtn">사진 첨부</div>
+          </label>
+          <input
+            id="file"
+            class="photoUploadInput"
+            type="file"
+            accept="image/*"
+          />
+          <span>최대 3장 업로드 가능합니다.</span>
+        </div>
+
+        <button class="reviewWriteBtn">등록</button>
+      </div>
+    </section>
+
+    <script
+      type="text/javascript"
+      src="http://code.jquery.com/jquery-3.6.4.min.js"
+    ></script>
+    <script type="text/javascript">
+      $(function () {
+        $(".reviewModalBtn").on("click", function (event) {
+          $("section.modalBackground").css("display", "flex");
+        });
+
+        $(".modalCloseBtn").on("click", function (event) {
+          $("section.modalBackground").css("display", "none");
+
+          // 별점 아이콘 초기화
+          $(".reviewStarIcon").attr(
+            "src",
+            "modal_images/product_review_star_on.png"
+          );
+          // textarea 초기화
+          $(".reviewWriteDiv textarea").val("");
+          // 등록버튼 초기화
+          $(".reviewWriteBtn").css("background-color", "#ddd");
+        });
+
+        // 별점 아이콘
+        $(".reviewStarIcon").on("click", function (event) {
+          $(".reviewStars").children().removeClass("starOn");
+          $(this)
+            .addClass("starOn")
+            .prevAll(".reviewStarIcon")
+            .addClass("starOn");
+
+          $(".reviewStarIcon").attr(
+            "src",
+            "modal_images/product_review_star_off.png"
+          );
+          $(".starOn").attr("src", "modal_images/product_review_star_on.png");
+        });
+
+        // 등록 버튼 활성화
+        $(".reviewWriteDiv textarea").keyup(function (event) {
+          if ($(this).val().length >= 5) {
+            $(".reviewWriteBtn")
+              .css("background-color", "#000")
+              .css("cursor", "pointer");
+          } else {
+            $(".reviewWriteBtn")
+              .css("background-color", "#ddd")
+              .css("cursor", "default");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
