@@ -386,12 +386,11 @@
 
                 <div class="bottomSection">
                     <div class="productDetailInfoSection">
-                        <div class="productDetailSectionHead">
-                            <span class="productDetailSectionTitle"
-                                >상품 상세 정보</span
-                            >
+                        <div class="infoSectionTitle">
+                            <span class="productDetailSectionHead">
+                                상품 상세 정보
+                            </span>
                         </div>
-                        <span class="underline3"></span>
                         <div class="productDetailSectionContents">
                             <div class="productDetailInfoItem">
                                 <div class="productDetailInfoItemLabel">
@@ -412,31 +411,25 @@
                             </div>
                         </div>
                     </div>
+
                     <div class="productReviewSection">
-                        <div class="productDetailSectionHead">
-                            <span class="productDetailSectionTitle"
-                                >상품 구매후기</span
-                            >
-                            <span class="productReviewTotalCnt">(1741)</span>
-                        </div>
-                        <div class="selectSortingTypeList">
-                            <input
-                                type="checkbox"
-                                id="togglePhoto"
-                                class="togglePhoto"
-                            />
-                            <label for="togglePhoto">
-                                <span>포토후기만 보기</span>
-                            </label>
-                        </div>
-                        <div class="rightArea">
-                            <div class="productDetailSectionHeadHelpText">
-                                상품 구매 후 후기를 작성하면
-                                <strong>최대 1,000 포인트</strong>를 드려요
+                        <div class="reviewSectionTitle">
+                            <div class="productDetailSectionHead">
+                                <span class="productDetailSectionTitle"
+                                    >상품 구매후기</span
+                                >
+                                <span class="productReviewTotalCnt"
+                                    >(1741)</span
+                                >
                             </div>
-                            <button>후기작성</button>
+                            <div class="reviewBtnArea">
+                                <div class="reviewBtnDescribe">
+                                    상품 구매 후 후기를 작성하면
+                                    <span>최대 1,000 포인트</span>를 드려요
+                                </div>
+                                <button>후기작성</button>
+                            </div>
                         </div>
-                        <span class="underline3"></span>
                         <div class="productReviewList">
                             <a href="#">
                                 <div class="productReviewItem">
@@ -488,7 +481,9 @@
                                                 d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"
                                             />
                                         </svg>
-                                        <span class="reviewLike">좋아요</span>
+                                        <span class="reviewLike"
+                                            >좋아요 <span>1</span></span
+                                        >
                                     </div>
                                 </div>
                             </a>
@@ -508,63 +503,9 @@
                         </div>
                     </div>
                     <div class="productQnaSection">
-                        <div class="productDetailSectionHead">
-                            <span class="productDetailSectionTitle"
-                                >브랜드에 문의하기
-                                <span class="allCount">(563)</span>
-                            </span>
-                            <div class="productDetailSectionHeadRightArea">
-                                <span class="productDetailSectionHeadHelpText">
-                                    <p>
-                                        상품에 대해 궁금한 점을 남겨주세요.
-                                        판매자가 확인 후 답변을 드립니다.
-                                    </p>
-                                </span>
-                                <button class="writeQna">문의작성</button>
-                            </div>
-                            <span class="underline3"></span>
-                        </div>
                         <div class="productDetailSectionContents">
                             <div class="productQnaList">
                                 <!--여기서부터 listitemwrap 추가하면 됨.-->
-                                <div class="productQnaListItemWrap">
-                                    <div class="productQnaListItem">
-                                        <div class="productQnaQuestionArea">
-                                            <div
-                                                class="productQnaInfo question"
-                                            >
-                                                <a href="#">
-                                                    <pre
-                                                        class="productQnaContents"
-                                                    >
-비밀글입니다.</pre
-                                                    >
-                                                    <div class="productQnaEtc">
-                                                        <span
-                                                            class="productQnaWriter"
-                                                            >2120**</span
-                                                        >
-                                                        <span
-                                                            class="productQnaLine"
-                                                            >|</span
-                                                        >
-                                                        <span
-                                                            class="productQnaDate"
-                                                            >2023.04.12</span
-                                                        >
-                                                    </div>
-                                                </a>
-                                                <div
-                                                    class="productQnaAnswerStatus"
-                                                >
-                                                    <span class="answerComplete"
-                                                        >답변완료</span
-                                                    >
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
                                 <ul class="listPagination">
                                     <li class="previous disabled"></li>
                                     <li class="listPageNumber selected"></li>
@@ -581,219 +522,130 @@
                             </div>
                         </div>
                     </div>
-                    <div class="productStoreMoreProductSection">
-                        <div class="productDetailSectionHead1">
-                            <span class="productDetailSectionTitle"
-                                >동일 브랜드 상품 더 보기</span
-                            >
-                            <div class="storeInfo">
-                                <a href="#">
-                                    <img
-                                        class="storeImage"
-                                        src="./product_details_images/SAI_9656.jpeg"
-                                        alt="image"
-                                    />
-                                    <div class="storeNameAndStoreLikeCnt">
-                                        <div class="storeName">딥브로우</div>
-                                        <div class="storeLikeCnt">
-                                            <span class="text">좋아요</span>
-                                            <span class="amount">5605</span>
-                                        </div>
-                                    </div>
-                                </a>
-                                <button class="storeLikeBtn">
-                                    <span>좋아요</span>
-                                </button>
-                            </div>
-                        </div>
-                        <div class="productStoreMoreProductImageList">
-                            <div class="imageWrapper">
-                                <span class="imageWrapper1">
-                                    <img
-                                        src="./product_details_images/PSI_929660_50.jpeg"
-                                        alt="image"
-                                    />
-                                </span>
-                                <span class="imageWrapper1">
-                                    <img
-                                        src="./product_details_images/PSI_903329_50.jpeg"
-                                        alt="image"
-                                    />
-                                </span>
-                                <span class="imageWrapper1">
-                                    <img
-                                        src="./product_details_images/PSI_903310_50.jpeg"
-                                        alt="image"
-                                    />
-                                </span>
-                            </div>
-                            <div class="imageWrapper">
-                                <span class="imageWrapper1">
-                                    <img
-                                        src="./product_details_images/PSI_903299_50.jpeg"
-                                        alt="image"
-                                    />
-                                </span>
-                                <span class="imageWrapper1">
-                                    <img
-                                        src="./product_details_images/PSI_903293_50.jpeg"
-                                        alt="image"
-                                    />
-                                </span>
-                                <span class="imageWrapper1">
-                                    <img
-                                        src="./product_details_images/PSI_903285_50.jpeg"
-                                        alt="image"
-                                    />
-                                </span>
-                            </div>
-                            <div class="imageWrapper">
-                                <span class="imageWrapper1">
-                                    <img
-                                        src="./product_details_images/PSI_903279_50.jpeg"
-                                        alt="image"
-                                    />
-                                </span>
-                                <span class="imageWrapper1">
-                                    <img
-                                        src="./product_details_images/PSI_903272_50.jpeg"
-                                        alt="image"
-                                    />
-                                </span>
-                                <span class="imageWrapper1">
-                                    <img
-                                        src="./product_details_images/PSI_903264_50.jpeg"
-                                        alt="image"
-                                    />
-                                </span>
-                            </div>
-                        </div>
-                    </div>
                     <div class="recommendProductSection">
                         <div class="recommendProductSectionTitle">
-                            <strong>비슷한 상품</strong>
+                            비슷한 상품
                         </div>
                         <div class="productListSlider">
-                            <div class="productListSwiper">
-                                <div class="swiperSlide1">
-                                    <!--여기서 slide 더 추가하기!-->
-                                    <article class="productListItem">
-                                        <a href="#">
-                                            <div class="productListItemImg">
-                                                <img
-                                                    src="./product_details_images/PSI_70381_50.jpeg"
-                                                    alt="image"
-                                                />
-                                                <div class="productName">
-                                                    Alice Heart Pearl Necklace
-                                                </div>
-                                                <div class="productPrice">
-                                                    <span class="price"
-                                                        >78,000</span
-                                                    >
-                                                    <span class="won">원</span>
-                                                </div>
+                            <div class="swiperWrapper">
+                                <!--여기서 slide 더 추가하기!-->
+                                <article class="productListItem">
+                                    <a href="#">
+                                        <div class="productListItemImg">
+                                            <img
+                                                src="./product_details_images/PSI_70381_50.jpeg"
+                                                alt="image"
+                                            />
+                                            <div class="productName">
+                                                Alice Heart Pearl Necklace
                                             </div>
-                                        </a>
-                                    </article>
+                                            <div class="productPrice">
+                                                <span class="price"
+                                                    >78,000</span
+                                                >
+                                                <span class="won">원</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </article>
 
-                                    <article class="productListItem">
-                                        <a href="#">
-                                            <div class="productListItemImg">
-                                                <img
-                                                    src="./product_details_images/PSI_86734_50.jpeg"
-                                                    alt="image"
-                                                />
-                                                <div class="productName">
-                                                    [아몬즈 단독] Ball Snake
-                                                    Necklace
-                                                </div>
-                                                <div class="productPrice">
-                                                    <span class="discount"
-                                                        >15%</span
-                                                    >
-                                                    <span class="price"
-                                                        >45,050</span
-                                                    >
-                                                    <span class="won">원</span>
-                                                </div>
+                                <article class="productListItem">
+                                    <a href="#">
+                                        <div class="productListItemImg">
+                                            <img
+                                                src="./product_details_images/PSI_86734_50.jpeg"
+                                                alt="image"
+                                            />
+                                            <div class="productName">
+                                                [아몬즈 단독] Ball Snake
+                                                Necklace
                                             </div>
-                                        </a>
-                                    </article>
+                                            <div class="productPrice">
+                                                <span class="discount"
+                                                    >15%</span
+                                                >
+                                                <span class="price"
+                                                    >45,050</span
+                                                >
+                                                <span class="won">원</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </article>
 
-                                    <article class="productListItem">
-                                        <a href="#">
-                                            <div class="productListItemImg">
-                                                <img
-                                                    src="./product_details_images/PSI_143891_50.jpeg"
-                                                    alt="image"
-                                                />
-                                                <div class="productName">
-                                                    luv bracelet
-                                                </div>
-                                                <div class="productPrice">
-                                                    <span class="discount"
-                                                        >10%</span
-                                                    >
-                                                    <span class="price"
-                                                        >50,400</span
-                                                    >
-                                                    <span class="won">원</span>
-                                                </div>
+                                <article class="productListItem">
+                                    <a href="#">
+                                        <div class="productListItemImg">
+                                            <img
+                                                src="./product_details_images/PSI_143891_50.jpeg"
+                                                alt="image"
+                                            />
+                                            <div class="productName">
+                                                luv bracelet
                                             </div>
-                                        </a>
-                                    </article>
+                                            <div class="productPrice">
+                                                <span class="discount"
+                                                    >10%</span
+                                                >
+                                                <span class="price"
+                                                    >50,400</span
+                                                >
+                                                <span class="won">원</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </article>
 
-                                    <article class="productListItem">
-                                        <a href="#">
-                                            <div class="productListItemImg">
-                                                <img
-                                                    src="./product_details_images/PSI_169737_50.jpeg"
-                                                    alt="image"
-                                                />
-                                                <div class="productName">
-                                                    Love pendant necklace
-                                                </div>
-                                                <div class="productPrice">
-                                                    <span class="price"
-                                                        >69,000</span
-                                                    >
-                                                    <span class="won">원</span>
-                                                </div>
+                                <article class="productListItem">
+                                    <a href="#">
+                                        <div class="productListItemImg">
+                                            <img
+                                                src="./product_details_images/PSI_169737_50.jpeg"
+                                                alt="image"
+                                            />
+                                            <div class="productName">
+                                                Love pendant necklace
                                             </div>
-                                        </a>
-                                    </article>
+                                            <div class="productPrice">
+                                                <span class="price"
+                                                    >69,000</span
+                                                >
+                                                <span class="won">원</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </article>
 
-                                    <article class="productListItem">
-                                        <a href="#">
-                                            <div class="productListItemImg">
-                                                <img
-                                                    src="./product_details_images/PSI_221436_50.jpeg"
-                                                    alt="image"
-                                                />
-                                                <div class="productName">
-                                                    [아이유, 성유리 착용] One
-                                                    clip
-                                                </div>
-                                                <div class="productPrice">
-                                                    <span class="discount"
-                                                        >7%</span
-                                                    >
-                                                    <span class="price"
-                                                        >39,060</span
-                                                    >
-                                                    <span class="won">원</span>
-                                                </div>
+                                <article class="productListItem">
+                                    <a href="#">
+                                        <div class="productListItemImg">
+                                            <img
+                                                src="./product_details_images/PSI_221436_50.jpeg"
+                                                alt="image"
+                                            />
+                                            <div class="productName">
+                                                [아이유, 성유리 착용] One clip
                                             </div>
-                                        </a>
-                                    </article>
-                                </div>
-                            </div>
-                            <div class="swiperButtonPrev1">
-                                <img src="./images/left_btn.png" alt="image" />
-                            </div>
-                            <div class="swiperButtonNext1">
-                                <img src="./images/right_btn.png" alt="image" />
+                                            <div class="productPrice">
+                                                <span class="discount">7%</span>
+                                                <span class="price"
+                                                    >39,060</span
+                                                >
+                                                <span class="won">원</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </article>
+                                <img
+                                    class="swiperButtonPrev1 swiperButton"
+                                    src="./images/left_btn.png"
+                                    alt="image"
+                                />
+                                <img
+                                    class="swiperButtonNext1 swiperButton"
+                                    src="./images/right_btn.png"
+                                    alt="image"
+                                />
                             </div>
                             <div class="swiperPagination">
                                 <span class="swiperPaginationBullet"></span>

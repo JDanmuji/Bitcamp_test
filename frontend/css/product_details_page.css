@@ -6,6 +6,12 @@
 ::after {
     box-sizing: inherit;
 }
+a:link,
+a:visited,
+a:hover,
+a:active {
+    color: #000;
+}
 
 .background {
     background-color: #fafafa;
@@ -25,7 +31,7 @@
 .bothSizeSectionWrap {
     position: relative;
     display: flex;
-    gap: 40px;
+    gap: 50px;
     justify-content: center;
 }
 .productImagesSection {
@@ -305,6 +311,7 @@
     display: flex;
     gap: 10px;
     align-items: center;
+    margin-bottom: 30px;
 }
 .productReviewMore > img {
     width: 12px;
@@ -333,11 +340,11 @@
     font-family: "Barlow", sans-serif;
     font-weight: bold;
     font-size: 23px;
-    margin: 20px 0 6px;
+    margin: 10px 0 6px;
     display: flex;
     justify-content: start;
     align-items: center;
-    gap: 10px;
+    gap: 6px;
 }
 .productPriceDiscountPercentUnitAmount {
     color: #6200f0;
@@ -507,29 +514,19 @@
 
 /* 아래칸 : 상품 상세 정보*/
 .bottomSection {
-    margin: 80px;
+    margin: 80px auto;
+    width: 1000px;
 }
 .productDetailSectionHead {
-    margin-bottom: 10px;
     font-size: 20px;
     font-weight: bold;
     letter-spacing: -0.5px;
-    padding: 0;
-}
-.underline3 {
-    display: inline-block;
-    height: 0.5px;
-    width: 100%;
-    background-color: black;
-    margin-top: 10px;
-    margin-bottom: 10px;
 }
 .productDetailInfoItemLabel {
     font-size: 12px;
     font-weight: 500;
     letter-spacing: -0.3px;
     width: 70px;
-    margin-right: 11px;
 }
 .productDetailInfoItemContents {
     font-size: 13px;
@@ -537,8 +534,15 @@
     line-height: 22px;
     color: rgb(155, 155, 155);
 }
-.productDetailSectionContents .productDetailInfoItem > div {
-    display: inline-block;
+.productDetailInfoItem {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.productDetailSectionContents {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
 }
 
 /* 상품 구매 후기 */
@@ -546,13 +550,20 @@
     margin-top: 80px;
     display: block;
 }
-.productDetailSectionHead {
-    margin-right: 20px;
-    display: inline-block;
+.reviewSectionTitle,
+.infoSectionTitle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    border-bottom: #000 solid 1px;
 }
-.selectSortingTypeList {
-    display: inline-block;
-    padding: 0;
+.reviewSectionTitle > div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
 .togglePhoto {
@@ -589,338 +600,114 @@
     vertical-align: top;
     cursor: pointer;
 }
-.rightArea {
-    display: inline-block;
-    margin-left: 246px;
-    margin-right: 0;
-}
-.productDetailSectionHeadHelpText {
+.reviewBtnDescribe {
     display: inline-block;
     font-size: 12px;
     letter-spacing: -0.3px;
     color: rgb(155, 155, 155);
 }
-strong {
-    color: rgb(0, 0, 0);
-    font-weight: 500;
+.reviewBtnDescribe span {
+    color: #000;
 }
-.rightArea button {
-    display: inline-block;
+.reviewBtnArea button {
     width: 65px;
     height: 30px;
-    line-height: 26px;
     background-color: black;
     border-radius: 3px;
     font-size: 12px;
-    color: #ffffff;
-    text-align: center;
-    align-self: center;
-    margin-left: auto;
-}
-.rate {
-    display: inline-block;
+    color: #fff;
 }
 .rate > img {
     width: 12px;
     height: 12px;
-    vertical-align: middle;
+}
+.reviewInfo {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 16px;
 }
 .accountAndDate {
-    display: inline-block;
-}
-.accountAndDate .account {
+    display: flex;
+    gap: 6px;
+    color: #9b9b9b;
     font-size: 10px;
     line-height: 15px;
     letter-spacing: -0.5px;
-    color: rgb(155, 155, 155);
-    margin-right: 2px;
-}
-.accountAndDate .line {
-    font-size: 10px;
-    line-height: 15px;
-    letter-spacing: -0.5px;
-    color: rgb(155, 155, 155);
-}
-.accountAndDate .date {
-    font-size: 10px;
-    line-height: 15px;
-    letter-spacing: -0.5px;
-    color: rgb(155, 155, 155);
-    margin-left: 2px;
 }
 .reviewContent {
-    display: block;
     max-width: 800px;
-    margin-top: 16px;
-    padding: 0;
     font-size: 13px;
     line-height: 22px;
     letter-spacing: -0.5px;
-    white-space: pre-wrap;
-    word-break: break-word;
+    margin-bottom: 20px;
 }
 .reviewLikeWrap {
-    display: inline-block;
+    display: flex;
+    gap: 6px;
+    align-items: center;
 }
 .reviewLikeHeart {
     width: 20px;
     height: 20px;
 }
 .reviewLike {
-    font-size: 8px;
+    font-size: 10px;
     font-weight: bold;
     line-height: 20px;
     color: rgb(155, 155, 155);
     vertical-align: middle;
 }
-/* 게시판 번호 아직 해결 못함!*/
-
-/* 브랜드에 문의하기 */
-.productQnaSection {
-    margin-top: 80px;
-    display: block;
-}
-.productDetailSectionHead {
-    display: inline-block;
-    padding: 0;
-    margin: 10px 0px;
-}
-.productDetailSectionHeadRightArea {
-    display: inline-block;
-    margin-left: 260px;
-}
-.productDetailSectionHeadHelpText > p {
-    display: inline-block;
-    font-size: 12px;
-    letter-spacing: -0.3px;
-    color: rgb(155, 155, 155);
-    margin-left: auto;
-}
-.writeQna {
-    border-radius: 2px;
-    outline: none;
-    border: 1px solid transparent;
-    text-align: center;
-    cursor: pointer;
-    background-color: rgb(0, 0, 0);
-    color: rgb(255, 255, 255);
-    font-size: 12px;
-    font-weight: 500;
-    letter-spacing: -0.5px;
-    height: 30px;
-    width: 65px;
-    line-height: 32px;
-    margin-left: 10px;
-}
-.productQnaInfo {
-    position: relative;
-    padding-right: 152px;
-}
-.productQnaContents {
-    display: block;
-    max-width: 800px;
-    margin-top: 0px;
-    padding: 0;
-    font-size: 13px;
-    line-height: 22px;
-    letter-spacing: -0.5px;
-    white-space: pre-wrap;
-    word-break: break-word;
-}
-.productQnaEtc {
-    display: inline-block;
-}
-.productQnaWriter,
-.productQnaLine,
-.productQnaDate {
-    font-size: 10px;
-    line-height: 15px;
-    letter-spacing: -0.5px;
-    color: rgb(155, 155, 155);
-}
-.productQnaLine {
-    margin-left: 2px;
-    margin-right: 2px;
-}
-.productQnaAnswerStatus {
-    position: absolute;
-    top: 0px;
-    right: 15px;
-    display: inline-block;
-    color: rgb(98, 0, 240);
-    font-size: 11px;
-    font-weight: bold;
-    letter-spacing: -0.5px;
-    cursor: pointer;
-}
-
-/* 동일 브랜드 상품 더 보기 */
-.productStoreMoreProductSection {
-    margin-top: 80px;
-    display: block;
-    position: relative;
-    width: 800px;
-}
-.productDetailSectionHead1 {
-    font-size: 20px;
-    font-weight: bold;
-    letter-spacing: -0.5px;
-    padding: 0;
-    margin-bottom: 16px;
-    position: relative;
-    width: 950px;
-}
-.productDetailSectionTitle {
-    font-size: 20px;
-    font-weight: bold;
-    letter-spacing: -0.5px;
-    line-height: 32px;
-}
-.productDetailSectionHead1 .storeInfo {
-    margin-bottom: 16px;
-    position: relative;
-    display: flex;
-}
-.storeInfo a {
-    display: flex;
-    position: relative;
-    text-decoration: none;
-    color: inherit;
-    padding-top: 20px;
-}
-.storeImage {
-    display: inline-block;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    margin-right: 0px;
-}
-.storeNameAndStoreLikeCnt {
-    display: inline-block;
-    position: relative;
-    vertical-align: middle;
-    align-items: center;
-}
-.storeNameAndStoreLikeCnt .storeName {
-    margin-bottom: 4px;
-    font-size: 14px;
-    font-weight: bold;
-    letter-spacing: -0.5px;
-    color: rgb(0, 0, 0);
-}
-.storeLikeCnt {
-    font-size: 11px;
-    display: block;
-    margin-left: 9px;
-    padding: 0;
-}
-.storeLikeCnt .text {
-    margin-right: 2px;
-    letter-spacing: -0.5px;
-    color: rgb(155, 155, 155);
-}
-.storeLikeCnt .amount {
-    font-size: 11px;
-    font-weight: 500;
-    font-family: "Barlow", sans-serif;
-}
-.storeLikeBtn {
-    display: inline-block;
-    position: relative;
-    margin-left: auto;
-    margin-top: 25px;
-    line-height: normal;
-    border: 1px solid rgb(0, 0, 0);
-    border-radius: 2px;
-    text-align: center;
-    cursor: pointer;
-    background-color: rgb(0, 0, 0);
-    color: rgb(255, 255, 255);
-    font-size: 12px;
-    font-weight: 500;
-    letter-spacing: -0.5px;
-    height: 30px;
-    width: 67px;
-}
-.imageWrapper {
-    display: flex;
-}
-.imageWrapper1 > img {
-    width: 318px;
-    height: 318px;
-    margin: 1px;
-    cursor: pointer;
-}
 
 /* 비슷한 상품 */
 .recommendProductSection {
     margin-top: 80px;
-    display: block;
-    position: relative;
-    width: 950px;
 }
-.recommendProductSectionTitle > strong {
+.recommendProductSectionTitle {
     font-size: 20px;
     font-weight: bold;
     letter-spacing: -0.5px;
     line-height: 32px;
-    margin-bottom: 16px;
-    padding: 0;
+    margin-bottom: 20px;
+}
+.swiperWrapper {
+    width: 1000px;
+    display: flex;
+    justify-content: space-between;
     position: relative;
-    width: 950px;
 }
-.swiperSlide1 {
+.swiperWrapper > article {
     display: flex;
-    width: 950px;
-    height: 270px;
-    flex-wrap: wrap;
-    flex-direction: row;
-    padding: 0;
-    margin: 0;
-}
-.swiperSlide1 > article {
-    display: flex;
-    width: 170px;
-    margin: 10px;
-    padding: 0;
+    width: 180px;
+    overflow: hidden;
 }
 .productListSlider {
     display: flex;
     width: 100%;
+    overflow: hidden;
 }
-.productListSwiper {
-    display: block;
-    width: 170px;
+.productListItemImg {
+    width: 180px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 .productListItemImg > img {
     width: 180px;
     height: 180px;
-    overflow: hidden;
-    margin-bottom: 10px;
     border-radius: 2px;
-    margin-right: 10px;
-    padding: 0;
 }
 .productListItemImg .productName {
-    width: 170px;
     white-space: nowrap;
     text-overflow: ellipsis;
-    overflow: hidden;
-    font-size: 13px;
-    font-weight: normal;
+    font-size: 14px;
     line-height: 19px;
     letter-spacing: -0.5px;
-    padding: 0;
     margin: 0;
 }
-.productListItemImg .productPrice {
-    -webkit-box-align: center;
-    align-items: center;
-    flex-direction: row;
-    margin: 10px 0 0 0;
-}
 .productPrice .price {
-    color: rgb(0, 0, 0);
+    color: #000;
     font-family: "Barlow" sans-serif;
     font-size: 16px;
     font-weight: 600;
@@ -929,8 +716,6 @@ strong {
     font-size: 12px;
     font-weight: normal;
     letter-spacing: -0.5px;
-    text-decoration: none;
-    padding: 0;
 }
 .productPrice .discount {
     font-family: "Barlow" sans-serif;
@@ -939,33 +724,23 @@ strong {
     color: rgb(98, 0, 240);
     margin-right: 2px;
 }
-.swiperButtonPrev1 {
+.swiperButton {
+    width: 32px;
+    height: 32px;
     display: flex;
     justify-content: center;
     align-items: center;
+
     position: absolute;
-    top: 122px;
-    left: 20px;
+    top: 74px;
     z-index: 10;
     cursor: pointer;
+}
+.swiperButtonPrev1 {
+    left: 10px;
 }
 .swiperButtonNext1 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    top: 122px;
-    right: 15px;
-    z-index: 10;
-    cursor: pointer;
-}
-.swiperButtonPrev1 > img {
-    width: 32px;
-    height: 32px;
-}
-.swiperButtonNext1 > img {
-    width: 32px;
-    height: 32px;
+    right: 10px;
 }
 
 /*

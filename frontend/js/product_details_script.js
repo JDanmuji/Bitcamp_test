@@ -19,20 +19,10 @@ $(document).ready(function () {
     $(".swiperButtonPrev").click(function () {
         --img_position;
         imgChange();
-
-        $(".swiperButtonNext").css("display", "block");
-        if (img_position == 1) {
-            $(".swiperButtonPrev").css("display", "none");
-        }
     });
     $(".swiperButtonNext").click(function () {
         ++img_position;
         imgChange();
-
-        $(".swiperButtonPrev").css("display", "block");
-        if (img_position == img_count) {
-            $(".swiperButtonNext").css("display", "none");
-        }
     });
     // mini thumbnail click
     $(".productThumbnailImageList > img").click(function () {
@@ -48,6 +38,15 @@ $(document).ready(function () {
             left: img_left,
         });
 
+        // btns remove & appear
+        $(".swiperButtonNext, .swiperButtonPrev").css("display", "block");
+        if (img_position == 1) {
+            $(".swiperButtonPrev").css("display", "none");
+        }
+        if (img_position == img_count) {
+            $(".swiperButtonNext").css("display", "none");
+        }
+
         // mini thumbnails opacity
         $(".productThumbnailImageList > img").css("opacity", "1");
         $(".productThumbnailImageList > img")
@@ -61,7 +60,6 @@ $(document).ready(function () {
     });
     $(".dropdownBox p").on("click", function (event) {
         $(".dropdownBox").css("display", "none");
-        $(".dropdownSelectLabel").text($(this).text());
     });
 
     // count btns
