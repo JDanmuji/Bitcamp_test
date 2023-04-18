@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <title>cart</title>
+        <link rel="stylesheet" href="css/reset.css" />
+        <link href="css/cartstyle.css" rel="stylesheet" />
+        <link href="css/style.css" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;700&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500;700&display=swap" rel="stylesheet" />
+    </head>
+    <body>
+        <header>
+            <div class="headerWrap">
+                <img class="amondzLogo" src="images/amonds_logo.jpg" alt="amondz logo" />
+                <div class="mainMenu">
+                    <a href="category.html">카테고리</a>
+                    <a href="">브랜드</a>
+                </div>
+                <div class="search">
+                    <div>궁금한 주얼리를 검색해보세요!</div>
+                    <img src="images/search_btn.png" alt="search icon" />
+                </div>
+                <div class="authMenu">
+                    <a class="loginBtn">로그인</a>
+                    <a class="myBtn">마이</a>
+                    <a class="cartBtn">
+                        <img src="images/header_cart_btn.svg" alt="cart icon" />
+                    </a>
+                </div>
+
+                <div class="searchModal">
+                    <div class="searchForm">
+                        <form>
+                            <input type="text" value="궁금한 주얼리를 검색해보세요!" />
+                            <button>
+                                <img src="images/search_btn.png" alt="search icon" />
+                            </button>
+                        </form>
+                        <button class="closeBtn">닫기</button>
+                    </div>
+                    <p><strong>추천 상품</strong></p>
+                    <div class="searchRecommend">
+                        <div>
+                            <img src="images/test.jpg" alt="" />
+                            <span><strong>추천브랜드</strong></span>
+                            <span>추천상품명</span>
+                        </div>
+                        <div>
+                            <img src="images/test.jpg" alt="" />
+                            <span><strong>추천브랜드</strong></span>
+                            <span>추천상품명</span>
+                        </div>
+                        <div>
+                            <img src="images/test.jpg" alt="" />
+                            <span><strong>추천브랜드</strong></span>
+                            <span>추천상품명</span>
+                        </div>
+                        <div>
+                            <img src="images/test.jpg" alt="" />
+                            <span><strong>추천브랜드</strong></span>
+                            <span>추천상품명</span>
+                        </div>
+                        <div>
+                            <img src="images/test.jpg" alt="" />
+                            <span><strong>추천브랜드</strong></span>
+                            <span>추천상품명</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main>
+            <section class="mainSection">
+                <div class="outerWrapper">
+                    <div class="cartTotalView">
+                        <div class="toparea">
+                            <div class="title">장바구니</div>
+                            <div class="paymentStepList">
+                                <span class="active">장바구니</span>
+                                <img alt src="images/step-right-arrow.png" />
+                                <span class="inactiveMiddle">결제하기</span>
+                                <img alt src="images/step-right-arrow-inactive.png" />
+                                <span class="inactive">주문완료</span>
+                            </div>
+                        </div>
+                        <div class="middlearea">
+                            <div class="cartListWrap">
+                                <div class="cartListCheckBnt">
+                                    <div class="cartListCheckBox">
+                                        <input id="checkedAll1" type="checkbox" checked />
+                                        <label for="checkedAll1">
+                                            <span style="font-size: 14px">전체선택</span>
+                                        </label>
+                                    </div>
+                                    <button class="deleteSectionBnt" type="button">선택삭제</button>
+                                </div>
+                                <div class="cartList">
+                                    <article class="cartListTotal">
+                                        <table class="cartTable">
+                                            <thead>
+                                                <tr>
+                                                    <th class="storeName" colspan="2">러브오낫</th>
+                                                    <th class="qty">수량</th>
+                                                    <th class="price">주문금액</th>
+                                                </tr>
+                                            </thead>
+                                            <tobody>
+                                                <tr class="tableBody">
+                                                    <td class="tdCheck01">
+                                                        <div class="productCheckBnt">
+                                                            <input id="checkedAll2" type="checkbox" checked />
+                                                            <label for="checkedAll2"> </label>
+                                                            <!-- <img class="uncheckRound" src="images/uncheck_round_icon.png" />
+                                                            <img class="checkRound" src="images/check_round_purple_icon.png" /> -->
+                                                        </div>
+                                                    </td>
+                                                    <td class="td01">
+                                                        <div class="productInfoBox">
+                                                            <div class="productImag">
+                                                                <a href="">
+                                                                    <img class="sampleImg" alt="" src="images/loveonot.jpeg" />
+                                                                </a>
+                                                            </div>
+                                                            <div class="productinfoText">
+                                                                <a href="">
+                                                                    <div class="productName">Deep Orange Fine Color Beads Ring</div>
+                                                                </a>
+                                                                <div class="productOption">옵션 : 없음</div>
+                                                                <div class="productPrice">
+                                                                    <span class="amount">9,900</span>
+                                                                    <span class="unit">원</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <td class="productCountWrap">
+                                                        <div class="productCount">
+                                                            <img class="countDownBnt" src="images/product_quantity_minus_btn.png" width="20" />
+                                                            <span>1</span>
+                                                            <img class="countUpBnt" src="images/product_quantity_plus_btn.png" width="20" />
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="productSumPrice">
+                                                            <span class="amount">9,900</span>
+                                                            <span class="unit">원</span>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div>
+                                                            <img class="productDeleteBnt" src="images/modal_close_btn.png" />
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </tobody>
+                                            <tfoot>
+                                                <tr>
+                                                    <td class="productBundleTotalPrice" colspan="5">
+                                                        <span class="productPrice">
+                                                            <span style="font-size: 14px">상품</span>
+                                                            <span class="amount">9,900</span>
+                                                            <span>+</span>
+                                                            <span style="font-size: 14px">배송비</span>
+                                                            <span class="amount">0</span>
+                                                            <span>=</span>
+                                                            <span class="totalPriceAmount">9,900</span>
+                                                        </span>
+                                                    </td>
+                                                </tr>
+                                            </tfoot>
+                                        </table>
+                                    </article>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="orderPreWrap">
+                            <div class="totalPricetop">
+                                <strong>주문 예정 금액</strong>
+                                <span>*아몬즈는 언제나 무료배송</span>
+                            </div>
+                            <div class="totalPriceMainBox">
+                                <div class="orderPrePrice">
+                                    <div class="title">주문 예정 금액</div>
+                                    <div class="text">9,900</div>
+                                </div>
+                                <div class="orderQty">
+                                    <div class="title">상품 수량</div>
+                                    <div class="text">1</div>
+                                </div>
+                                <div class="prePoint">
+                                    <div class="title">적립 예정 포인트</div>
+                                    <div class="text">+99P</div>
+                                </div>
+                                <div class="deliveryFee">
+                                    <div class="title">배송비</div>
+                                    <div class="text">0</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cartBntWrap">
+                            <button class="cancleBnt" color="white">쇼핑 계속하기</button>
+                            <button class="submitBnt" color="black">구매하기</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <div class="footer1">
+                <div class="footer1Left">
+                    <a>회사소개</a>
+                    <a>입점신청</a>
+
+                    <!--
+              <div>
+                  <span>법적 고지</span>
+                  <ul>
+                      <li>
+                          (주) 비주얼은 결제정보의 중개서비스 또는
+                          통신판매중개시스템의 제공자로서, 통신판매의
+                          당사자가 아니며,
+                      </li>
+                      <li>
+                          상품의 주문, 배송 및 환불 등과 관련한 의무와
+                          책임이 각 판매자에게 1차로 있습니다.
+                      </li>
+                      <li>
+                          단, (주) 비주얼 또한 상품의 주문, 배송 및
+                          환불등과 관련한 의무와 책임을 가지고있습니다.
+                      </li>
+                  </ul>
+              </div>
+              -->
+                </div>
+                <div class="footer1Right">
+                    <div class="footerGlobal">
+                        <span>글로벌</span>
+                        <div>
+                            <img src="" alt="amondz Japan logo" />
+                            <img src="" alt="amondz US logo" />
+                        </div>
+                    </div>
+
+                    <div class="footerChannels">
+                        <span>아몬즈를 다양한 채널에서 만나보세요.</span>
+                        <div>
+                            <a href=""><img src="images/footer_social_naver_post_btn.svg" alt="naver post logo" /></a>
+                            <a href=""><img src="images/footer_social_insta_btn.svg" alt="insta logo" /></a>
+                            <a href=""><img src="images/footer_social_youtube_btn.svg" alt="youtube logo" /></a>
+                            <a href=""><img src="images/footer_social_facebook_btn.svg" alt="facebook logo" /></a>
+                            <a href=""><img src="images/footer_social_kakao_btn.svg" alt="kakao logo" /></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <script type="text/javascript" src="http://code.jquery.com/jquery-3.6.4.min.js"></script>
+        <script type="text/javascript">
+            $(function () {
+                $("#chekedAll1").is(":unchecked").hide(".deleteSectionBnt");
+            });
+        </script>
+    </body>
+</html>

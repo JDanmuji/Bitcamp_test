@@ -1,0 +1,412 @@
+/* header */
+* {
+    padding: 0;
+    font-family: "Noto Sans KR", sans-serif;
+}
+*,
+::before,
+::after {
+    box-sizing: inherit;
+}
+body {
+    line-height: 1.15;
+}
+
+header {
+    position: sticky;
+    top: 0px;
+    left: 0px;
+    z-index: 90;
+    width: 100%;
+    min-width: 1024px;
+    box-shadow: rgb(237, 237, 237) 0px 1px 0px 0px;
+    background-color: rgb(255, 255, 255);
+    margin-bottom: 30px;
+}
+a {
+    color: black;
+}
+
+/* cartTop */
+.outerWrapper {
+    display: flex;
+    flex-direction: column;
+    -webkit-box-align: center;
+    align-items: center;
+    max-width: 1200px;
+    padding: 40px;
+    padding-bottom: 118px;
+    color: black;
+    box-shadow: rgba(125, 125, 125, 0.05) 0px 0px 15px 0px;
+    margin: 0 auto;
+}
+.cartTotalView {
+    width: 964px;
+}
+
+.toparea {
+    height: 59px;
+    line-height: 59px;
+    margin-bottom: 40px;
+}
+.toparea .title {
+    display: inline-block;
+    font-size: 40px;
+    font-weight: bold;
+    letter-spacing: -1px;
+    color: black;
+}
+.paymentStepList {
+    float: right;
+    line-height: 59px;
+}
+.inactiveMiddle,
+.inactive {
+    color: #9b9b9b;
+}
+.paymentStepList img {
+    width: 12px;
+    height: 12px;
+    margin: 0px 8px;
+}
+.cartListCheckBnt {
+    display: flex;
+    margin-bottom: 10px;
+}
+.cartListCheckBnt input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0px;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0px, 0px, 0px, 0px);
+    border: 0px;
+}
+.cartListCheckBnt input + label {
+    cursor: pointer;
+    user-select: none;
+}
+.cartListCheckBnt input + label::before {
+    content: " ";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    line-height: 24px;
+    text-align: center;
+    vertical-align: middle;
+    margin-right: 8px;
+    background-image: url(../images/uncheck_round_icon.png);
+    background-size: cover;
+}
+.cartListCheckBnt input:checked + label::before {
+    background-image: url(../images/check_round_purple_icon.png);
+    background-size: cover;
+}
+
+.deleteSectionBnt {
+    color: lightgray;
+    text-decoration: underline;
+    cursor: pointer;
+    padding: 0 0 0 16px;
+}
+
+.cartListTotal {
+    margin-bottom: 56px;
+}
+
+.tdCheck01 {
+    width: 48px;
+}
+.sampleImg {
+    width: 100px;
+    height: 100px;
+}
+.cartTable {
+    border-collapse: collapse;
+}
+.cartTable thead tr:first-child {
+    border-top: 1px solid black;
+    border-bottom: 0.5px solid lightgray;
+}
+.cartTable tfoot tr:first-child {
+    border-top: 0.2px solid lightgray;
+}
+.qty {
+    width: 156px;
+    text-align: center;
+    font-size: 13px;
+}
+.price {
+    width: 156px;
+    text-align: center;
+    font-size: 13px;
+}
+.storeName {
+    width: 604px;
+    height: 54px;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: left;
+}
+.cartListTotal .count {
+    width: 156px;
+}
+.tableBody {
+    height: 148px;
+}
+.tableBody td:nth-of-type(3) {
+    text-align: center;
+}
+tbody tr td {
+    padding: 24px 0px;
+}
+.productCheckBnt input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0px;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0px, 0px, 0px, 0px);
+    border: 0px;
+}
+.productCheckBnt input + label {
+    cursor: pointer;
+    user-select: none;
+}
+.productCheckBnt input + label::before {
+    content: " ";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    line-height: 24px;
+    text-align: center;
+    vertical-align: middle;
+    background-image: url(../images/uncheck_round_icon.png);
+    background-size: cover;
+    margin-right: 8px;
+}
+.productCheckBnt input:checked + label::before {
+    background-image: url(../images/check_round_purple_icon.png);
+    background-size: cover;
+}
+.productInfoBox {
+    display: flex;
+}
+.productinfoText {
+    padding-left: 24px;
+    width: 440px;
+}
+.productName {
+    font-size: 14px;
+    letter-spacing: -0.5px;
+    word-break: break-all;
+    font-family: NotoSansCJKkr;
+    margin-bottom: 6px;
+    margin-top: 6px;
+}
+.productOption {
+    font-size: 12px;
+    color: #9b9b9b;
+    margin-bottom: 6px;
+}
+
+.productCount {
+    display: inline-flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    width: 92px;
+    text-align: center;
+    font-family: Barlow;
+    font-size: 14px;
+    font-weight: 600;
+}
+.productCount span {
+    margin-top: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.countUpBnt,
+.countDownBnt {
+    cursor: pointer;
+}
+.productPrice {
+    color: #9b9b9b;
+}
+.productPrice .amount {
+    font-size: 16px;
+    font-weight: bold;
+    font-family: Barlow;
+}
+.totalPriceAmount {
+    font-size: 16px;
+    font-weight: bold;
+    font-family: Barlow;
+}
+.productBundleTotalPrice {
+    text-align: right;
+    padding-top: 13px;
+}
+.productSumPrice {
+    width: 156px;
+    text-align: center;
+}
+.productSumPrice .amount {
+    font-size: 18px;
+    font-weight: bold;
+    font-family: Barlow;
+}
+
+.unit {
+    font-size: 11px;
+    font-weight: 500;
+}
+.productDeleteBnt {
+    width: 24px;
+    padding-left: 24px;
+    cursor: pointer;
+}
+.totalPricetop {
+    margin-bottom: 12px;
+}
+.totalPricetop strong {
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 29px;
+    letter-spacing: -0.5px;
+}
+.totalPricetop span {
+    float: right;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 29px;
+    letter-spacing: -0.5px;
+}
+.totalPriceMainBox {
+    display: flex;
+    padding: 44px 0px;
+    border: 1px solid rgb(237, 237, 237);
+    background-color: rgb(247, 247, 247);
+}
+
+.orderPreWrap {
+    width: 964px;
+    height: 150px;
+}
+.orderPrePrice {
+    display: inline-block;
+    width: 25%;
+    text-align: center;
+    position: relative;
+}
+.orderPrePrice .title {
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: -0.5px;
+    margin-bottom: 4px;
+}
+.orderPrePrice .text {
+    font-family: Barlow;
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 34px;
+}
+.orderQty {
+    display: inline-block;
+    width: 25%;
+    text-align: center;
+    position: relative;
+}
+.orderQty .title {
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: -0.5px;
+    margin-bottom: 4px;
+}
+.orderQty .text {
+    font-family: Barlow;
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 34px;
+}
+.prePoint {
+    display: inline-block;
+    width: 25%;
+    text-align: center;
+    position: relative;
+}
+.prePoint .title {
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: -0.5px;
+    margin-bottom: 4px;
+}
+.prePoint .text {
+    font-family: Barlow;
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 34px;
+}
+.deliveryFee {
+    display: inline-block;
+    width: 25%;
+    text-align: center;
+    position: relative;
+}
+.deliveryFee .title {
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: -0.5px;
+    margin-bottom: 4px;
+}
+.deliveryFee .text {
+    font-family: Barlow;
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 34px;
+}
+.totalPriceMainBox > div:not(:first-of-type)::after {
+    content: "";
+    display: block;
+    width: 1px;
+    height: 62px;
+    background-color: rgb(229, 229, 229);
+    position: absolute;
+    top: 0px;
+    left: -1px;
+}
+.cartBntWrap {
+    margin: 40px -10px 0px;
+    padding-top: 30px;
+}
+.cartBntWrap > button {
+    width: 468px;
+    height: 48px;
+    margin: 0px 10px;
+    font-size: 15px;
+}
+.cancleBnt {
+    border-color: black;
+    border-radius: 2px;
+    outline: none;
+    background-color: white;
+    color: black;
+    border: 1px solid rgb(225, 225, 225);
+    font-weight: 500;
+    letter-spacing: -0.3px;
+    line-height: 40px;
+}
+
+.submitBnt {
+    border-radius: 2px;
+    outline: none;
+    border: 1px solid transparent;
+    text-align: center;
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    font-weight: 500;
+    letter-spacing: -0.3px;
+    height: 40px;
+    line-height: 40px;
+}
