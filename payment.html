@@ -556,7 +556,27 @@
         <script type="text/javascript">
             $(function () {
 
-                
+                summaryInfoAnimation();
+               
+            });
+
+            //selectBox function                
+            $(".dropDownCoverSelector").on("click", function (event) {
+                $(".dropDownSelectListWrap").css("display", "block");
+            });
+
+            $(".dropDownSelectListWrap").on("click", function (event) {
+                $(".dropDownSelectListWrap").css("display", "none");
+            });
+
+            $(".dropDownSelectListPlain li").on("click", function (event) {
+                $('.dropDownSelect span').text($(this).text());
+                $(".dropDownSelectListWrap").css("display", "none");
+            });
+
+
+
+            function summaryInfoAnimation() {
                 var lnb = $("div.paymentCheckOutSummaryInfo").offset().top;
 
                 
@@ -567,24 +587,16 @@
                 
                         
                     if (lnb <= window) {
-                        
                         $(".paymentCheckOutSummaryInfo").addClass("fixed");
-                    
-                    }else{
+                    } else{
                         $(".paymentCheckOutSummaryInfo").removeClass("fixed");
                     }
                 });
                   
-                
-                $(".dropDownCoverSelector").on("click", function (event) {
-                    $(".dropDownSelectListWrap").css("display", "block");
-                });
+            
+            }
 
-                $(".dropDownSelectListWrap").on("click", function (event) {
-                    $(".dropDownSelectListWrap").css("display", "none");
-                });
-               
-            });
+            
 
         </script>
     </body>
