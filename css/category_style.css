@@ -1,0 +1,428 @@
+* {
+    font-family: "Noto Sans KR", sans-serif;
+}
+body {
+    margin: 0 auto;
+    line-height: 1.15;
+}
+
+/* header */
+.mainMenu a:first-child {
+    color: #000;
+}
+
+/* main */
+main {
+    max-width: 1024px;
+    min-width: 1024px;
+    padding: 0 30px;
+    margin: 0 auto;
+
+    display: flex;
+}
+
+/* left section */
+.leftSection {
+    width: 20%;
+    border-right: 1px solid rgb(237, 237, 237);
+    padding: 30px 0;
+}
+.leftSection h2 {
+    padding: 0px 0px 12px;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 29px;
+    letter-spacing: -0.5px;
+}
+.categoryTitle {
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: -0.5px;
+    padding: 13px 0px;
+    border-bottom: 1px solid rgb(247, 247, 247);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.leftSection img {
+    cursor: pointer;
+}
+.expandBtn {
+    width: 24px;
+    height: 24px;
+    padding: 10px 20px;
+}
+.categoryToggle {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 16px 0px 22px 16px;
+    border-bottom: 1px solid rgb(247, 247, 247);
+    font-weight: 500;
+    color: rgb(155, 155, 155);
+}
+.categoryToggle p {
+    cursor: pointer;
+}
+.categoryToggle p:hover {
+    color: #000;
+}
+
+/* right section */
+/* sticky menu */
+.rightSection {
+    padding: 0 40px;
+    width: 80%;
+    height: 1000px;
+    position: relative;
+}
+.stickyMenu {
+    position: sticky;
+    top: 80px;
+    padding: 30px 20px 0;
+    z-index: 80;
+    background-color: #fff;
+}
+.selectedCategory img {
+    width: 24px;
+    height: 24px;
+}
+.selectedCategory {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-bottom: 20px;
+}
+
+.filterBox {
+    margin: 0px auto;
+    width: calc(100%-2px);
+    font-size: 14px;
+    letter-spacing: -0.5px;
+    border: 1px solid rgb(237, 237, 237);
+
+    display: flex;
+    justify-content: end;
+    position: relative;
+}
+.filterBox > span {
+    padding: 16px 20px;
+    width: 150px;
+    cursor: pointer;
+}
+.filterBox span:nth-child(3) {
+    border-left: 2px solid rgb(237, 237, 237);
+}
+
+/* sort toggle */
+.sortToggle {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    right: 190px;
+    border: 1px solid rgb(237, 237, 237);
+    background-color: #fff;
+    z-index: 80;
+}
+.sortToggle div {
+    width: 180px;
+    height: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.sortToggle div:hover,
+.sortToggle div:active {
+    background-color: #eee;
+}
+
+.sortToggle a:link,
+.sortToggle a:visited,
+.sortToggle a:hover,
+.sortToggle a:active {
+    color: #000;
+}
+
+/* filter toggle - brand filter */
+.filterToggle {
+    display: flex;
+    flex-direction: column;
+}
+.filterToggle {
+    width: 400px;
+    height: auto;
+    border: 1px solid rgb(237, 237, 237);
+    background-color: #fff;
+    position: absolute;
+    top: 100%;
+    right: -1px;
+    z-index: 70;
+}
+.filterMenu {
+    display: flex;
+    gap: 20px;
+}
+.filterMenu > p:first-child {
+    color: #000;
+}
+.filterMenu,
+.brandFilter {
+    padding: 12px 0;
+    margin: 0 16px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 24px;
+    border-bottom: 1px solid rgb(237, 237, 237);
+}
+.brandFilter div:first-child {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 8px;
+    border-bottom: 1px solid rgb(237, 237, 237);
+}
+.filterMenu > p {
+    color: rgb(217, 217, 217);
+    cursor: pointer;
+}
+.filterMenu p:last-child {
+    margin-left: auto;
+}
+.filterToggle .searchIcon {
+    width: 18px;
+    height: 18px;
+    margin-right: 20px;
+}
+.filterToggle input {
+    width: 100%;
+    overflow: visible;
+    font-size: 16px;
+    color: rgb(217, 217, 217);
+}
+.filterToggle .recommendBrand {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    justify-content: center;
+    align-items: start;
+    border-bottom: none;
+}
+.filterToggle div h3 {
+    color: #000;
+    line-height: 45px;
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: -0.5px;
+}
+.recommendBrand > a {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    cursor: pointer;
+    color: #000;
+}
+.filterToggle .brandImg {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+.filterToggle p {
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: -0.5px;
+    line-height: 24px;
+}
+.filterBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 16px;
+}
+.filterResetBtn {
+    margin: 6px 0 6px;
+    width: 40px;
+    height: 40px;
+    border: 1px solid rgb(225, 225, 225);
+    border-radius: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.filterResetBtn img {
+    width: 24px;
+    height: 24px;
+    padding: 8px;
+}
+.filterResultBtn {
+    border-radius: 2px;
+    border: 1px solid transparent;
+    text-align: center;
+    background-color: #000;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 500;
+    padding: 2px 0;
+    width: 320px;
+    line-height: 40px;
+    margin: 10px;
+}
+
+/* filter toggle - color filter */
+.colorFilter {
+    display: none;
+    grid-template-columns: 1fr 1fr;
+    margin: 20px;
+    margin-bottom: 0;
+    gap: 16px;
+}
+.colorFilter > p {
+    cursor: pointer;
+    color: #000;
+    font-weight: 400;
+}
+
+/* filter toggle - price filter */
+.priceFilter {
+    display: none;
+    flex-direction: column;
+    margin: 20px;
+    margin-bottom: 0;
+    gap: 16px;
+}
+.priceFilterChoice {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.priceFilterChoice > p {
+    font-weight: 400;
+    cursor: pointer;
+}
+.priceFilterInput > input {
+    width: 80px;
+    font-size: 14px;
+    padding: 10px 8px;
+    border: 1px solid rgb(237, 237, 237);
+    margin: 10px 4px 0 4px;
+}
+.priceFilterInput > button {
+    width: auto;
+    font-size: 14px;
+    padding: 10px 20px;
+    margin-left: 30px;
+    background-color: #000;
+    color: #fff;
+}
+
+/* contents */
+.articleContents a:link,
+.articleContents a:visited,
+.articleContents a:hover,
+.articleContents a:active {
+    color: #000;
+    margin-bottom: 16px;
+}
+.articleContents {
+    position: relative;
+    display: flex;
+    gap: 20px;
+    margin: 20px;
+    margin-bottom: 60px;
+}
+.articleImg {
+    width: 100%;
+    height: 230px;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+.articleImg img {
+    width: 100%;
+    height: 230px;
+}
+.articleDesc {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    font-size: 14px;
+}
+.articleDesc span:first-child,
+.articleDesc span:nth-child(2) {
+    font-size: 13px;
+}
+.articlePrice {
+    display: flex;
+    font-family: Barlow;
+    margin-top: 10px;
+}
+.percentage {
+    color: rgb(98, 0, 240);
+}
+.price {
+    margin: 0 10px 0 4px;
+}
+.deliveryIcon {
+    width: 60px;
+}
+.heartIcon {
+    width: 16px;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.likeNumber {
+    font-size: 10px;
+    font-weight: bold;
+    line-height: 15px;
+    color: rgb(155, 155, 155);
+}
+
+/* footer */
+footer {
+    line-height: 18px;
+    font-size: 12px;
+    font-weight: 500;
+    min-width: 1024px;
+}
+.footer1 {
+    display: flex;
+    padding: 40px;
+    gap: 100px;
+    justify-content: space-between;
+    border-top: 1px solid rgb(237, 237, 237);
+    border-bottom: 1px solid rgb(237, 237, 237);
+}
+.footer1Left {
+    display: flex;
+    gap: 100px;
+}
+.footer1Left a {
+    min-width: 50px;
+}
+.footer1Left div {
+    min-width: 500px;
+}
+.footer1Left div ul {
+    font-weight: 400;
+    font-size: 11px;
+    color: #777;
+}
+.footer1Right {
+    display: flex;
+    gap: 100px;
+    min-width: 500px;
+}
+.footerChannels {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.footerChannels > div {
+    display: flex;
+    justify-content: space-between;
+}

@@ -557,15 +557,14 @@
             $(function () {
 
                 
-                
                 var lnb = $("div.paymentCheckOutSummaryInfo").offset().top;
 
-                console.log(lnb);
+                
                 
                 $(window).scroll(function() {
                      
                     var window = $(this).scrollTop();
-                    console.log(window);
+                
                         
                     if (lnb <= window) {
                         
@@ -576,7 +575,7 @@
                     }
                 });
                   
-                //if()
+                
                 $(".dropDownCoverSelector").on("click", function (event) {
                     $(".dropDownSelectListWrap").css("display", "block");
                 });
