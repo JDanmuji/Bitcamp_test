@@ -279,8 +279,9 @@ a:active {
 }
 .urlCopy {
     margin-left: auto;
-    width: 20px;
-    height: 20px;
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
 }
 .productInfoSection > a {
     text-decoration: none;
@@ -292,10 +293,16 @@ a:active {
     justify-content: center;
     line-height: 26px;
     margin-left: 10px;
+    /* width 없으면 url 아이콘 밀림 */
+    width: 70px;
 }
 .productLikeHeart {
-    width: 23px;
-    height: 23px;
+    height: 16px;
+    cursor: pointer;
+}
+.productLikeHeartViolet {
+    display: none;
+    height: 17px;
     cursor: pointer;
 }
 
@@ -409,27 +416,29 @@ a:active {
 }
 
 .selectedProductOptionList {
-    margin-top: 10px;
-    max-height: 248px;
+    margin: 10px 0;
     overflow: auto;
-    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    max-height: 300px;
 }
-.selectedProductOptionList > li {
+.selectedOptionItem {
     padding: 16px;
     border-radius: 2px;
     background: #f8f8f8;
 }
-.optionDetailInfo {
+.optionBoxTop {
     display: flex;
     justify-content: space-between;
 }
-.optionInfo {
+.optionName {
     font-size: 13px;
     line-height: 22px;
     letter-spacing: -0.5px;
     word-break: break-all;
 }
-.deleteProductOptionBtn {
+.deleteOptionBtn {
     margin-left: 24px;
     width: 16px;
     height: 16px;
@@ -641,22 +650,6 @@ a:active {
     line-height: 22px;
     letter-spacing: -0.5px;
     margin-bottom: 20px;
-}
-.reviewLikeWrap {
-    display: flex;
-    gap: 6px;
-    align-items: center;
-}
-.reviewLikeHeart {
-    width: 20px;
-    height: 20px;
-}
-.reviewLike {
-    font-size: 10px;
-    font-weight: bold;
-    line-height: 20px;
-    color: rgb(155, 155, 155);
-    vertical-align: middle;
 }
 
 /* 비슷한 상품 */

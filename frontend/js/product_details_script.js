@@ -54,7 +54,17 @@ $(document).ready(function () {
             .css("opacity", "0.6");
     }
 
-    // option selectBox
+    // like heart icon
+    $(".productLikeHeart").on("click", function (event) {
+        $(".productLikeHeart").css("display", "none");
+        $(".productLikeHeartViolet").css("display", "block");
+    });
+    $(".productLikeHeartViolet").on("click", function (event) {
+        $(".productLikeHeart").css("display", "block");
+        $(".productLikeHeartViolet").css("display", "none");
+    });
+
+    // option select dropdown
     $(".dropdownSelect").on("click", function (event) {
         $(".dropdownBox").css("display", "flex");
     });
@@ -62,38 +72,91 @@ $(document).ready(function () {
         $(".dropdownBox").css("display", "none");
     });
 
+    // adding selected option box
+    $(".dropdownOption").on("click", function (event) {
+        // get selected option name
+        var select_name = $(this).text();
+        var name_exist = false;
+
+        // check existing boxes
+        $(".optionName").each(function () {
+            if ($(this).text() == select_name) {
+                name_exist = true;
+            }
+        });
+
+        // HTML content
+        if (name_exist == false) {
+            var newOptionItem = $(
+                "<li class='selectedOptionItem'>" +
+                    "<div class='optionBoxTop'>" +
+                    "<div class='optionName'>" +
+                    select_name +
+                    "</div>" +
+                    "<img class='deleteOptionBtn' src='./product_details_images/delete_btn.png' alt='X icon' />" +
+                    "</div>" +
+                    "<div class='productOptionQuantity'>" +
+                    "<div class='countWrap'>" +
+                    "<img class='countDecrease' src='./product_details_images/product_quantity_minus_round_btn.png' alt='minus icon' />" +
+                    "<div class='count'>1</div>" +
+                    "<img class='countIncrease' src='./product_details_images/product_quantity_plus_round_btn.png' alt='plus icon' />" +
+                    "</div>" +
+                    "<span class='amountWrap'>" +
+                    "<span class='amount'>49,640</span>" +
+                    "<span class='unit'>원</span>" +
+                    "</span></div></li>"
+            );
+
+            // append new option box
+            $("ul.selectedProductOptionList").append(newOptionItem);
+        }
+    });
+
     // count btns
-    var option_quantity = 1;
     var option_amount = 49640;
-    // 가격 formatter
+    // price formatter
     function addComma(num) {
         var regexp = /\B(?=(\d{3})+(?!\d))/g;
         return num.toString().replace(regexp, ",");
     }
 
-    $(".countDecrease").on("click", function (event) {
-        if (option_quantity > 0) {
-            option_quantity--;
-            $(this)
-                .parents(".productOptionQuantity")
-                .find(".countWrap .count")
-                .text(option_quantity);
+    // - button
+    $("ul.selectedProductOptionList").on(
+        "click",
+        ".countDecrease",
+        function (event) {
+            const $countClass = $(this).siblings(".count");
+            let quantity = parseInt($countClass.text());
+
+            $countClass.text(--quantity);
             $(this)
                 .parents(".productOptionQuantity")
                 .find(".amount")
-                .text(addComma(option_quantity * option_amount));
+                .text(addComma(quantity * option_amount));
         }
-    });
-    $(".countIncrease").on("click", function (event) {
-        $(".countWrap .count").text(++option_quantity);
-        $(this)
-            .parents(".productOptionQuantity")
-            .find(".amount")
-            .text(addComma(option_quantity * option_amount));
-    });
+    );
+    // + button
+    $("ul.selectedProductOptionList").on(
+        "click",
+        ".countIncrease",
+        function (event) {
+            const $countClass = $(this).siblings(".count");
+            let quantity = parseInt($countClass.text());
+
+            $countClass.text(++quantity);
+            $(this)
+                .parents(".productOptionQuantity")
+                .find(".amount")
+                .text(addComma(quantity * option_amount));
+        }
+    );
 
     // option box delete btn
-    $(".deleteProductOptionBtn").on("click", function (event) {
-        $(this).parents(".selectedOptionItem").css("display", "none");
-    });
+    $("ul.selectedProductOptionList").on(
+        "click",
+        ".deleteOptionBtn",
+        function (event) {
+            $(this).parents(".selectedOptionItem").remove();
+        }
+    );
 });
