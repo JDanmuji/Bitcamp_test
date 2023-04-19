@@ -1,15 +1,7 @@
 $(document).ready(function () {
-    $(".storeNoticeOpenBtn").on("click", function (event) {
-        $(".storeNoticeContents").css("max-height", "1000px");
-        $(".storeNoticeOpenBtn").css("display", "none");
-        $(".storeNoticeCloseBtn").css("display", "block");
-    });
-    $(".storeNoticeCloseBtn").on("click", function (event) {
-        $(".storeNoticeContents").css("max-height", "60px");
-        $(".storeNoticeOpenBtn").css("display", "block");
-        $(".storeNoticeCloseBtn").css("display", "none");
-    });
-
+    // ---------------------------------------------------
+    //                    thumbnail
+    // ---------------------------------------------------
     // main thumbnail slide
     var imgs = $(".mainThumbnailList");
     var img_count = imgs.children().length;
@@ -54,6 +46,9 @@ $(document).ready(function () {
             .css("opacity", "0.6");
     }
 
+    // ---------------------------------------------------
+    //                  Like heart
+    // ---------------------------------------------------
     // like heart icon
     $(".productLikeHeart").on("click", function (event) {
         $(".productLikeHeart").css("display", "none");
@@ -64,6 +59,9 @@ $(document).ready(function () {
         $(".productLikeHeartViolet").css("display", "none");
     });
 
+    // ---------------------------------------------------
+    //                     option
+    // ---------------------------------------------------
     // option select dropdown
     $(".dropdownSelect").on("click", function (event) {
         $(".dropdownBox").css("display", "flex");
@@ -72,67 +70,94 @@ $(document).ready(function () {
         $(".dropdownBox").css("display", "none");
     });
 
-    // adding selected option box
-    $(".dropdownOption").on("click", function (event) {
-        // get selected option name
-        var select_name = $(this).text();
-        var name_exist = false;
-
-        // check existing boxes
-        $(".optionName").each(function () {
-            if ($(this).text() == select_name) {
-                name_exist = true;
-            }
-        });
-
-        // HTML content
-        if (name_exist == false) {
-            var newOptionItem = $(
-                "<li class='selectedOptionItem'>" +
-                    "<div class='optionBoxTop'>" +
-                    "<div class='optionName'>" +
-                    select_name +
-                    "</div>" +
-                    "<img class='deleteOptionBtn' src='./product_details_images/delete_btn.png' alt='X icon' />" +
-                    "</div>" +
-                    "<div class='productOptionQuantity'>" +
-                    "<div class='countWrap'>" +
-                    "<img class='countDecrease' src='./product_details_images/product_quantity_minus_round_btn.png' alt='minus icon' />" +
-                    "<div class='count'>1</div>" +
-                    "<img class='countIncrease' src='./product_details_images/product_quantity_plus_round_btn.png' alt='plus icon' />" +
-                    "</div>" +
-                    "<span class='amountWrap'>" +
-                    "<span class='amount'>49,640</span>" +
-                    "<span class='unit'>원</span>" +
-                    "</span></div></li>"
-            );
-
-            // append new option box
-            $("ul.selectedProductOptionList").append(newOptionItem);
-        }
-    });
-
-    // count btns
-    var option_amount = 49640;
     // price formatter
     function addComma(num) {
         var regexp = /\B(?=(\d{3})+(?!\d))/g;
         return num.toString().replace(regexp, ",");
     }
 
+    // add all option box HTML
+    $(".dropdownBox p").each(function () {
+        let original_amount = 100;
+
+        let optionItem = $(
+            "<li class='selectedOptionItem'>" +
+                "<div class='optionBoxTop'>" +
+                "<div class='optionName'>" +
+                $(this).text() +
+                "</div>" +
+                "<img class='deleteOptionBtn' src='./product_details_images/delete_btn.png' alt='X icon' />" +
+                "</div>" +
+                "<div class='productOptionQuantity'>" +
+                "<div class='countWrap'>" +
+                "<img class='countDecrease' src='./product_details_images/product_quantity_minus_round_btn.png' alt='minus icon' />" +
+                "<div class='count'>0</div>" +
+                "<img class='countIncrease' src='./product_details_images/product_quantity_plus_round_btn.png' alt='plus icon' />" +
+                "</div>" +
+                "<span class='amountWrap'>" +
+                "<span class='amount'>" +
+                addComma(original_amount) +
+                "</span>" +
+                "<div class='originalAmount'> " +
+                original_amount +
+                "</div>" +
+                "<span class='unit'>원</span>" +
+                "</span></div></li>"
+        );
+
+        // append new option box
+        $("ul.selectedProductOptionList").append(optionItem);
+    });
+
+    // total price calc function
+    function totalUpdate() {
+        let total_price = 0;
+
+        $(".selectedOptionItem").each(function () {
+            let current_amount = parseInt(
+                $(this).find(".amount").text().replace(",", "")
+            );
+
+            total_price += current_amount;
+        });
+        $(".productTotalPrice .amount").text(addComma(total_price));
+    }
+
+    // display selected option box
+    $(".dropdownOption").on("click", function (event) {
+        // get selected option name
+        var select_name = $(this).text();
+
+        // check existing boxes
+        $(".selectedOptionItem").each(function () {
+            if ($(this).find(".optionName").text() == select_name) {
+                $(this).find(".countIncrease").click();
+                $(this).css("display", "block");
+            }
+        });
+        totalUpdate();
+    });
+
+    // count btns
     // - button
     $("ul.selectedProductOptionList").on(
         "click",
         ".countDecrease",
         function (event) {
-            const $countClass = $(this).siblings(".count");
-            let quantity = parseInt($countClass.text());
-
-            $countClass.text(--quantity);
-            $(this)
+            const $count_class = $(this).siblings(".count");
+            const $amount_class = $(this)
                 .parents(".productOptionQuantity")
-                .find(".amount")
-                .text(addComma(quantity * option_amount));
+                .find(".amount");
+            const $original_amount_class =
+                $amount_class.siblings(".originalAmount");
+            let option_count = parseInt($count_class.text());
+            let original_amount = parseInt($original_amount_class.text());
+
+            if (option_count > 0) {
+                $count_class.text(--option_count);
+                $amount_class.text(addComma(option_count * original_amount));
+            }
+            totalUpdate();
         }
     );
     // + button
@@ -140,14 +165,20 @@ $(document).ready(function () {
         "click",
         ".countIncrease",
         function (event) {
-            const $countClass = $(this).siblings(".count");
-            let quantity = parseInt($countClass.text());
-
-            $countClass.text(++quantity);
-            $(this)
+            const $count_class = $(this).siblings(".count");
+            const $amount_class = $(this)
                 .parents(".productOptionQuantity")
-                .find(".amount")
-                .text(addComma(quantity * option_amount));
+                .find(".amount");
+            const $original_amount_class = $(this)
+                .parents(".productOptionQuantity")
+                .find(".originalAmount");
+            let option_count = parseInt($count_class.text());
+            let original_amount = parseInt($original_amount_class.text());
+
+            $count_class.text(++option_count);
+            $amount_class.text(addComma(option_count * original_amount));
+
+            totalUpdate();
         }
     );
 
@@ -156,7 +187,29 @@ $(document).ready(function () {
         "click",
         ".deleteOptionBtn",
         function (event) {
-            $(this).parents(".selectedOptionItem").remove();
+            const $parentLi = $(this).parents("li.selectedOptionItem");
+
+            // count, amount 초기화
+            $parentLi.find(".count").text("0");
+            $parentLi.find(".amount").text("0");
+            $parentLi.css("display", "none");
+            totalUpdate();
         }
     );
+});
+
+// ---------------------------------------------------
+//                   store notice
+// ---------------------------------------------------
+// 더보기
+$(".storeNoticeOpenBtn").on("click", function (event) {
+    $(".storeNoticeContents").css("max-height", "1000px");
+    $(".storeNoticeOpenBtn").css("display", "none");
+    $(".storeNoticeCloseBtn").css("display", "block");
+});
+// 접기
+$(".storeNoticeCloseBtn").on("click", function (event) {
+    $(".storeNoticeContents").css("max-height", "60px");
+    $(".storeNoticeOpenBtn").css("display", "block");
+    $(".storeNoticeCloseBtn").css("display", "none");
 });

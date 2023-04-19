@@ -193,6 +193,9 @@ a:active {
     vertical-align: middle;
     margin-right: 7px;
 }
+.customerServiceInfo span {
+    cursor: pointer;
+}
 .asInfoBtn {
     margin-bottom: 24px;
 }
@@ -424,6 +427,7 @@ a:active {
     max-height: 300px;
 }
 .selectedOptionItem {
+    display: none;
     padding: 16px;
     border-radius: 2px;
     background: #f8f8f8;
@@ -458,6 +462,9 @@ a:active {
     -webkit-box-align: center;
     align-items: center;
     height: 20px;
+}
+.originalAmount {
+    display: none;
 }
 .countWrap > img {
     width: 20px;
