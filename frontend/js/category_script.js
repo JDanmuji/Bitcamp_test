@@ -1,3 +1,6 @@
+// ---------------------------------------------------
+//                category nav
+// ---------------------------------------------------
 // Show the first category when the page loads
 $(".categoryWrap:not(:first)")
     .find(".categoryToggle")
@@ -12,7 +15,9 @@ $(function () {
     });
 });
 
-// sorting menu box
+// ---------------------------------------------------
+//                sorting menu box
+// ---------------------------------------------------
 $(".sortToggle").toggle(0);
 $(function () {
     $(".filterBox > span:first-child").on("click", function (event) {
@@ -20,7 +25,9 @@ $(function () {
     });
 });
 
-// filter menu box
+// ---------------------------------------------------
+//                filter menu box
+// ---------------------------------------------------
 $(".filterToggle").toggle(0);
 $(function () {
     $(".filterBox > span:nth-child(3)").on("click", function (event) {
@@ -71,4 +78,16 @@ $(".brandFilter > div > input").on("blur", function (event) {
         $(this).val("브랜드명을 입력해 주세요");
     }
     $(".brandFilterSearchDiv").css("border-bottom", "1px solid #ededed");
+});
+
+// ---------------------------------------------------
+//                  Like heart
+// ---------------------------------------------------
+$(".heartIconWhite").on("click", function (event) {
+    $(this).css("display", "none");
+    $(this).parent().find(".heartIconViolet").css("display", "block");
+});
+$(".heartIconViolet").on("click", function (event) {
+    $(this).css("display", "none");
+    $(this).parent().find(".heartIconWhite").css("display", "block");
 });

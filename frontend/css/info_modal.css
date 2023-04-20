@@ -62,6 +62,9 @@ section.modalBackground {
     font-weight: 500;
     line-height: 24px;
 }
+.infoModal h3:first-child {
+    margin-top: 0;
+}
 .infoModal p {
     font-size: 13px;
     color: rgb(102, 102, 102);

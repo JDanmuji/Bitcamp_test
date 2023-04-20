@@ -724,24 +724,6 @@ a:active {
     color: rgb(98, 0, 240);
     margin-right: 2px;
 }
-.swiperButton {
-    width: 32px;
-    height: 32px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    position: absolute;
-    top: 74px;
-    z-index: 10;
-    cursor: pointer;
-}
-.swiperButtonPrev1 {
-    left: 10px;
-}
-.swiperButtonNext1 {
-    right: 10px;
-}
 
 /*
 .swiperPagination{

@@ -334,9 +334,13 @@ main {
     margin: 20px;
     margin-bottom: 60px;
 }
+.articleContent {
+    position: relative;
+}
 .articleImg {
     width: 100%;
     height: 230px;
+    width: 224.8px;
     overflow: hidden;
     margin-bottom: 10px;
 }
@@ -345,7 +349,6 @@ main {
     height: 230px;
 }
 .articleDesc {
-    position: relative;
     display: flex;
     flex-direction: column;
     gap: 6px;
@@ -372,57 +375,22 @@ main {
 .heartIcon {
     width: 16px;
     position: absolute;
-    top: 0;
+    top: 238px;
     right: 0;
+    cursor: pointer;
+}
+.heartIconWhite {
+    height: 16px;
+    width: 17px;
+}
+.heartIconViolet {
+    display: none;
+    height: 17px;
+    width: 18px;
 }
 .likeNumber {
     font-size: 10px;
     font-weight: bold;
     line-height: 15px;
     color: #9b9b9b;
-}
-
-/* footer */
-footer {
-    line-height: 18px;
-    font-size: 12px;
-    font-weight: 500;
-    min-width: 1024px;
-}
-.footer1 {
-    display: flex;
-    padding: 40px;
-    gap: 100px;
-    justify-content: space-between;
-    border-top: 1px solid #ededed;
-    border-bottom: 1px solid #ededed;
-}
-.footer1Left {
-    display: flex;
-    gap: 100px;
-}
-.footer1Left a {
-    min-width: 50px;
-}
-.footer1Left div {
-    min-width: 500px;
-}
-.footer1Left div ul {
-    font-weight: 400;
-    font-size: 11px;
-    color: #777;
-}
-.footer1Right {
-    display: flex;
-    gap: 100px;
-    min-width: 500px;
-}
-.footerChannels {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-.footerChannels > div {
-    display: flex;
-    justify-content: space-between;
 }

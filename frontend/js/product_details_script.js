@@ -78,7 +78,7 @@ $(document).ready(function () {
 
     // add all option box HTML
     $(".dropdownBox p").each(function () {
-        let original_amount = 100;
+        let original_amount = 1000;
 
         let optionItem = $(
             "<li class='selectedOptionItem'>" +
@@ -95,9 +95,7 @@ $(document).ready(function () {
                 "<img class='countIncrease' src='./product_details_images/product_quantity_plus_round_btn.png' alt='plus icon' />" +
                 "</div>" +
                 "<span class='amountWrap'>" +
-                "<span class='amount'>" +
-                addComma(original_amount) +
-                "</span>" +
+                "<span class='amount'>0</span>" +
                 "<div class='originalAmount'> " +
                 original_amount +
                 "</div>" +
